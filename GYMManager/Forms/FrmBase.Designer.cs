@@ -28,36 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblName = new System.Windows.Forms.Label();
+            this.lblClose = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblName
+            // lblClose
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI Light", 14.25F);
-            this.lblName.Location = new System.Drawing.Point(340, 120);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(57, 25);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "label1";
+            this.lblClose.Location = new System.Drawing.Point(673, 13);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(49, 23);
+            this.lblClose.TabIndex = 0;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 532);
-            this.Controls.Add(this.lblName);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(734, 482);
+            this.ControlBox = false;
+            this.Controls.Add(this.lblClose);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMain";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblClose;
+
 
     }
 }

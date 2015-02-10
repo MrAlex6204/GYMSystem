@@ -19,8 +19,7 @@ namespace GYMManager
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-           
-          
+                   
                    
         }
  
