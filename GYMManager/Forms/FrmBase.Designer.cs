@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblClose = new System.Windows.Forms.Label();
+            this.animatedButton1 = new GYMManager.Controls.AnimatedButton();
             this.SuspendLayout();
             // 
             // lblClose
@@ -38,6 +39,17 @@
             this.lblClose.Size = new System.Drawing.Size(49, 23);
             this.lblClose.TabIndex = 0;
             // 
+            // animatedButton1
+            // 
+            this.animatedButton1.BackColor = System.Drawing.SystemColors.Control;
+            this.animatedButton1.Image = global::GYMManager.Properties.Resources.close_normal_pic;
+            this.animatedButton1.Location = new System.Drawing.Point(698, 8);
+            this.animatedButton1.MouseOverImage = global::GYMManager.Properties.Resources.close_hover_pic;
+            this.animatedButton1.Name = "animatedButton1";
+            this.animatedButton1.Size = new System.Drawing.Size(24, 23);
+            this.animatedButton1.TabIndex = 1;
+            this.animatedButton1.UseVisualStyleBackColor = false;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -45,6 +57,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(734, 482);
             this.ControlBox = false;
+            this.Controls.Add(this.animatedButton1);
             this.Controls.Add(this.lblClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -58,6 +71,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblClose;
+        private Controls.AnimatedButton animatedButton1;
 
 
     }

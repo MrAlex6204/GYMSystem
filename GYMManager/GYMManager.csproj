@@ -47,6 +47,9 @@
   <ItemGroup>
     <Compile Include="Classes\Configuration.cs" />
     <Compile Include="Classes\Definitions.cs" />
+    <Compile Include="Controls\AnimatedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\FrmError.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,9 +103,7 @@
     <None Include="Resources\ic_close_grey600_24dp.png" />
     <None Include="Resources\ic_close_black_24dp.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
