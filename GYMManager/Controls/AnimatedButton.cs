@@ -2,52 +2,74 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Diagnostics;
+using System.ComponentModel;
 namespace GYMManager.Controls
 {
+   
     class AnimatedButton : System.Windows.Forms.Button
     {
 
-
-
-        private System.Drawing.Image _OverImage = null;
-        private System.Drawing.Image _NormalImage = null;
-        public System.Drawing.Image MouseOverImage
+        [Category("Behavior")]
+        public MouseBehaviorExtension MouseBehavior
         {
-            get { return _OverImage; }
-            set { _OverImage = value; }
+            get;
+            set;
         }
 
-        public  System.Drawing.Image Image {
-            get {
-                return _NormalImage;
-            }
-            set {
-                base.Image = value;
-                _NormalImage = value;
-            }
-        }
-
-        public AnimatedButton()
-            : base()
+        public override string ToString()
         {
-            this.MouseHover += new EventHandler(_MouseOver);
-            this.MouseLeave += new EventHandler(_MouseLeave);
+
+            return "Button";
         }
 
 
-        private void _MouseOver(object sender, object e) {
-            if (_OverImage != null) {
-                this.Image = _OverImage;
+
+        protected override void OnMouseLeave(EventArgs e)
+        {
+
+            if (this.MouseBehavior.LeaveImage != null)
+            {
+                this.Image = this.MouseBehavior.LeaveImage;
             }
-        }
-        private void _MouseLeave(object sender, object e) {
-            if (_NormalImage != null) {
-                this.Image = _NormalImage;
+            if (this.MouseBehavior.LeaveText != null & this.MouseBehavior.LeaveText != "")
+            {
+                this.Text = this.MouseBehavior.LeaveText;
             }
+            if (this.MouseBehavior.LeaveForecolor != null)
+            {
+                this.ForeColor = this.MouseBehavior.LeaveForecolor;
+            }
+            if (this.MouseBehavior.LeaveColor != null)
+            {
+                this.BackColor = this.MouseBehavior.LeaveColor;
+            }
+            this.Refresh();
+
+            base.OnMouseLeave(e);
         }
 
+        protected override void OnMouseHover(EventArgs e)
+        {
 
+            if (this.MouseBehavior.HoverImage != null)
+            {
+                this.Image = this.MouseBehavior.HoverImage;
+            }
+            if (this.MouseBehavior.HoverText != null & this.MouseBehavior.HoverText != "")
+            {
+                this.Text = this.MouseBehavior.HoverText;
+            }
+            if (this.MouseBehavior.HoverForecolor != null)
+            {
+                this.ForeColor = this.MouseBehavior.HoverForecolor;
+            }
+            if (this.MouseBehavior.HoverColor != null)
+            {
+                this.BackColor = this.MouseBehavior.HoverColor;
+            }
+            base.OnMouseHover(e);
+        }
 
     }
 }

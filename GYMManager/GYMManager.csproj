@@ -50,6 +50,7 @@
     <Compile Include="Controls\AnimatedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\MouseBehaviorExtension.cs" />
     <Compile Include="Forms\FrmError.cs">
       <SubType>Form</SubType>
     </Compile>
