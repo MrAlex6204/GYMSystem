@@ -10,11 +10,13 @@ namespace GYMManager.Controls
     class AnimatedButton : System.Windows.Forms.Button
     {
 
-        [Category("Behavior")]
+        private MouseBehaviorExtension _MouseEventBehavior = new MouseBehaviorExtension();
+
+      
         public MouseBehaviorExtension MouseBehavior
         {
-            get;
-            set;
+            get { return _MouseEventBehavior; }
+            set { _MouseEventBehavior = value;  }
         }
 
         public override string ToString()
@@ -27,6 +29,7 @@ namespace GYMManager.Controls
 
         protected override void OnMouseLeave(EventArgs e)
         {
+            //===>Set values when the mouse leave
 
             if (this.MouseBehavior.LeaveImage != null)
             {
@@ -51,6 +54,7 @@ namespace GYMManager.Controls
 
         protected override void OnMouseHover(EventArgs e)
         {
+            //===>Set values when the mouse hover
 
             if (this.MouseBehavior.HoverImage != null)
             {

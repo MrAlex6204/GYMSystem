@@ -6,72 +6,86 @@ using System.ComponentModel;
 namespace GYMManager.Controls
 {
 
-    [TypeConverter(typeof(ExpandableObjectConverter) )]
-    class MouseBehaviorExtension
+    [TypeConverter(typeof(ExpandableObjectConverter))]
+    public class MouseBehaviorExtension
     {
 
-        private string _HoverTex = null,_LeaveText=null;   
+      
 
-        [Category("Hover")]        
+        #region Properties
+
+        private string _HoverTex = null, _LeaveText = null;
+        [Category("Hover")]
         public string HoverText
         {
-            get{return _HoverTex;}
-            set{_HoverTex = value;}
+            get { return _HoverTex; }
+            set { _HoverTex = value; }
         }
-        [Category("Leave")]       
+        [Category("Leave")]
         public string LeaveText
         {
-            get{return _LeaveText;}
-            set{_LeaveText = value;}
+            get { return _LeaveText; }
+            set { _LeaveText = value; }
         }
 
 
-        private System.Drawing.Color _HoverColor = null,_LeaveColor = null;
-        [Category("Hover")]        
+        private System.Drawing.Color _HoverColor, _LeaveColor;
+        [Category("Hover")]
         public System.Drawing.Color HoverColor
         {
-            get;
-            set;
+            get { return _HoverColor; }
+            set { _HoverColor = value; }
         }
         [Category("Leave")]
-       
         public System.Drawing.Color LeaveColor
         {
-            get;
-            set;
-        }
-        [Category("Hover")]
-       
-        public System.Drawing.Color HoverForecolor
-        
-            get;
-            set;
-        }
-        [Category("Leave")]
-       
-        public System.Drawing.Color LeaveForecolor
-        {
-            get;
-            set;
-        }
-        [Category("Hover")]
-       
-        public System.Drawing.Image HoverImage
-        {
-            get;
-            set;
-        }
-        [Category("Leave")]
-       
-        public System.Drawing.Image LeaveImage
-        {
-            get;
-            set;
+            get { return _LeaveColor; }
+            set { _LeaveColor = value; }
         }
 
+
+        private System.Drawing.Color _HoverForecolor, _LeaveForecolor;
+        [Category("Hover")]
+        public System.Drawing.Color HoverForecolor
+        {
+            get { return _HoverForecolor; }
+            set { _HoverForecolor = value; }
+        }
+        [Category("Leave")]
+        public System.Drawing.Color LeaveForecolor
+        {
+            get { return _LeaveForecolor; }
+            set { _LeaveForecolor = value; }
+        }
+
+
+        private System.Drawing.Image _HoverImage = null, _LeaveImage = null;
+        [Category("Hover")]
+        public System.Drawing.Image HoverImage
+        {
+            get { return _HoverImage; }
+            set { _HoverImage = value; }
+        }
+        [Category("Leave")]
+        public System.Drawing.Image LeaveImage
+        {
+            get { return _LeaveImage; }
+            set { _LeaveImage = value; }
+        }
+
+
+        #endregion
+
+        #region Functions
+        
         public override string ToString()
         {
-            return "Mouse Common Behavior";
+            return "Mouse Event Adicional Behavior";
         }
+
+        #endregion
+
+        
+
     }
 }

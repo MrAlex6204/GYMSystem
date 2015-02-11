@@ -27,6 +27,11 @@ namespace GYMManager
         {
             this.Close();
         }
+
+        private void animatedButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
  
     }
 }

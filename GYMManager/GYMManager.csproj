@@ -101,6 +101,9 @@
     <Content Include="dbGYM.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\minimize_hover_pic.png" />
+    <None Include="Resources\minimize_normal_pic.png" />
+    <None Include="Resources\close_hover_pic.png" />
     <None Include="Resources\ic_close_grey600_24dp.png" />
     <None Include="Resources\ic_close_black_24dp.png" />
   </ItemGroup>
