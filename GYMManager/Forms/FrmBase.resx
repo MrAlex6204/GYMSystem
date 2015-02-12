@@ -121,22 +121,22 @@
   <data name="cmdMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACw4AAAsOAUC+4UEAAABVSURBVEhLtcwhDoAAEANBPn3v
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACwwAAAsMAT9AIsgAAABVSURBVEhLtcwhDoAAEANBPn3v
         BwTuRhCyiDGbtMfM/IqxxFhiLDGWGEuMJcYSY4mxxFhivJ0fra8VHhq/sb5WqDGWGEuMJcYSY4mxxFhi
         LDGWGDtzXPm7MdJO3hySAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="mouseBehaviorExtension1.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mouseBehaviorExtension7.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACw4AAAsOAUC+4UEAAAAkSURBVEhLYxgFo2AUjALywX8y
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACwwAAAsMAT9AIsgAAAAkSURBVEhLYxgFo2AUjALywX8y
         MdEAm2Zi8CgYBaNgFJAOGBgAt1Qb5a9vAu0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="mouseBehaviorExtension1.LeaveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mouseBehaviorExtension7.LeaveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACw4AAAsOAUC+4UEAAABVSURBVEhLtcwhDoAAEANBPn3v
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACwwAAAsMAT9AIsgAAABVSURBVEhLtcwhDoAAEANBPn3v
         BwTuRhCyiDGbtMfM/IqxxFhiLDGWGEuMJcYSY4mxxFhivJ0fra8VHhq/sb5WqDGWGEuMJcYSY4mxxFhi
         LDGWGDtzXPm7MdJO3hySAAAAAElFTkSuQmCC
 </value>
