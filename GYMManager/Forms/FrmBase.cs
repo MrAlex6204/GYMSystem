@@ -32,6 +32,11 @@ namespace GYMManager
         {
             this.Close();
         }
+
+        private void cmdMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
  
     }
 }

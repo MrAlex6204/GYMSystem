@@ -81,6 +81,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Fonts\3OF9.TTF" />
+    <None Include="Fonts\BARCD39.TTF" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,8 +103,9 @@
     <Content Include="dbGYM.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\minimize_hover_pic.png" />
+    <None Include="Resources\close_hover_pic1.png" />
     <None Include="Resources\minimize_normal_pic.png" />
+    <None Include="Resources\minimize_hover_pic.png" />
     <None Include="Resources\close_hover_pic.png" />
     <None Include="Resources\ic_close_grey600_24dp.png" />
     <None Include="Resources\ic_close_black_24dp.png" />

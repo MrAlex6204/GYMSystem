@@ -118,16 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="mouseBehaviorExtension2.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="cmdMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACw8AAAsPAZL5A6UAAAACYktHRAD/h4/MvwAAAUlJREFU
-        SEvdlEFOAkEQRScs5C4gh8AjmGA0Es+EiQl3kMBhRLcSoy70BrDB/xI6qVTXdI+z5CcvkKH611BVXc3Z
-        aygexEZ8iMMJvq/FXBDTS7fiWxwrfIkb0VkDsRSRWYknwdmq+pgnSFIUZYkO/oeZCEWzfM1fxFT8mmeJ
-        H8Fvr+YZfIoLkYlpsYGAAboUNgnmI4GuhD0D9yITo+gDMcUcjQXG1nwion+3EpmYbR8IGGCO+KyZw05k
-        4gJFwcBbpySoZA57kamWIL058j3xhAnaSuRrnnpSSvIuMrFbfGDUUPCN9+eeRSYWlw9MY+przvfUE2Ls
-        GbgTmbhoLC4buBXMeVQK3hzzN/MMKHV40RBb0Qb34VoUxcKKDnbhUVTFyu2TZCE6resktiKLKzKzUPNq
-        WdpEs1hc7BauPxcImHNGkWlpbeg5qGn+AM7DDD+8CA0rAAAAAElFTkSuQmCC
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACw4AAAsOAUC+4UEAAABVSURBVEhLtcwhDoAAEANBPn3v
+        BwTuRhCyiDGbtMfM/IqxxFhiLDGWGEuMJcYSY4mxxFhivJ0fra8VHhq/sb5WqDGWGEuMJcYSY4mxxFhi
+        LDGWGDtzXPm7MdJO3hySAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="mouseBehaviorExtension1.HoverImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACw4AAAsOAUC+4UEAAAAkSURBVEhLYxgFo2AUjALywX8y
+        MdEAm2Zi8CgYBaNgFJAOGBgAt1Qb5a9vAu0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="mouseBehaviorExtension1.LeaveImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACw4AAAsOAUC+4UEAAABVSURBVEhLtcwhDoAAEANBPn3v
+        BwTuRhCyiDGbtMfM/IqxxFhiLDGWGEuMJcYSY4mxxFhivJ0fra8VHhq/sb5WqDGWGEuMJcYSY4mxxFhi
+        LDGWGDtzXPm7MdJO3hySAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>
