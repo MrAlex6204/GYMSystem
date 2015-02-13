@@ -93,6 +93,36 @@ namespace GYMManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_home_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_home_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_home_grey600_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_home_grey600_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_home_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_home_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize_hover_pic {
             get {
                 object obj = ResourceManager.GetObject("minimize_hover_pic", resourceCulture);

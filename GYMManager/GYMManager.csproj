@@ -51,6 +51,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MouseBehaviorExtension.cs" />
+    <Compile Include="Controls\PanelWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\FrmError.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +106,9 @@
     <Content Include="dbGYM.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\ic_home_white_24dp.png" />
+    <None Include="Resources\ic_home_grey600_24dp.png" />
+    <None Include="Resources\ic_home_black_24dp.png" />
     <None Include="Resources\close_hover_pic1.png" />
     <None Include="Resources\minimize_normal_pic.png" />
     <None Include="Resources\minimize_hover_pic.png" />
