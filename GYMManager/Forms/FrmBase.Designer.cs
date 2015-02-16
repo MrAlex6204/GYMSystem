@@ -38,6 +38,7 @@
             GYMManager.Controls.MouseBehaviorExtension mouseBehaviorExtension7 = new GYMManager.Controls.MouseBehaviorExtension();
             GYMManager.Controls.MouseBehaviorExtension mouseBehaviorExtension8 = new GYMManager.Controls.MouseBehaviorExtension();
             this.lblClose = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelWindow1 = new PanelWindow();
             this.cmdHome = new GYMManager.Controls.AnimatedButton();
             this.animatedButton6 = new GYMManager.Controls.AnimatedButton();
@@ -47,6 +48,7 @@
             this.animatedButton2 = new GYMManager.Controls.AnimatedButton();
             this.cmdMinimize = new GYMManager.Controls.AnimatedButton();
             this.cmdClose = new GYMManager.Controls.AnimatedButton();
+            this.borderDrawer1 = new BorderDrawer();
             this.SuspendLayout();
             // 
             // lblClose
@@ -56,13 +58,22 @@
             this.lblClose.Size = new System.Drawing.Size(49, 23);
             this.lblClose.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBox1.Location = new System.Drawing.Point(369, 132);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(296, 22);
+            this.textBox1.TabIndex = 0;
+            // 
             // panelWindow1
             // 
             this.panelWindow1.BackColor = System.Drawing.Color.White;
-            this.panelWindow1.Location = new System.Drawing.Point(153, 31);
+            this.panelWindow1.Location = new System.Drawing.Point(154, 208);
             this.panelWindow1.Name = "panelWindow1";
             this.panelWindow1.OwnerButton = this.cmdHome;
-            this.panelWindow1.Size = new System.Drawing.Size(683, 361);
+            this.panelWindow1.Size = new System.Drawing.Size(682, 184);
             this.panelWindow1.TabIndex = 8;
             // 
             // cmdHome
@@ -74,7 +85,7 @@
             this.cmdHome.ForeColor = System.Drawing.Color.DimGray;
             this.cmdHome.Image = global::GYMManager.Properties.Resources.ic_home_grey600_24dp;
             this.cmdHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdHome.Location = new System.Drawing.Point(0, 0);
+            this.cmdHome.Location = new System.Drawing.Point(1, 1);
             mouseBehaviorExtension1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension1.HoverForecolor = System.Drawing.Color.Goldenrod;
             mouseBehaviorExtension1.HoverImage = global::GYMManager.Properties.Resources.ic_home_white_24dp;
@@ -86,7 +97,7 @@
             this.cmdHome.MouseBehavior = mouseBehaviorExtension1;
             this.cmdHome.Name = "cmdHome";
             this.cmdHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.cmdHome.Size = new System.Drawing.Size(147, 74);
+            this.cmdHome.Size = new System.Drawing.Size(147, 64);
             this.cmdHome.TabIndex = 2;
             this.cmdHome.Text = "       Home";
             this.cmdHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,7 +111,7 @@
             this.animatedButton6.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.animatedButton6.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton6.Location = new System.Drawing.Point(0, 330);
+            this.animatedButton6.Location = new System.Drawing.Point(1, 330);
             mouseBehaviorExtension2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension2.HoverForecolor = System.Drawing.Color.Goldenrod;
             mouseBehaviorExtension2.HoverImage = null;
@@ -126,7 +137,7 @@
             this.animatedButton5.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.animatedButton5.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton5.Location = new System.Drawing.Point(0, 264);
+            this.animatedButton5.Location = new System.Drawing.Point(1, 264);
             mouseBehaviorExtension3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension3.HoverForecolor = System.Drawing.Color.Goldenrod;
             mouseBehaviorExtension3.HoverImage = null;
@@ -152,7 +163,7 @@
             this.animatedButton4.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.animatedButton4.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton4.Location = new System.Drawing.Point(0, 198);
+            this.animatedButton4.Location = new System.Drawing.Point(1, 198);
             mouseBehaviorExtension4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension4.HoverForecolor = System.Drawing.Color.Goldenrod;
             mouseBehaviorExtension4.HoverImage = null;
@@ -178,7 +189,7 @@
             this.animatedButton3.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.animatedButton3.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton3.Location = new System.Drawing.Point(0, 132);
+            this.animatedButton3.Location = new System.Drawing.Point(1, 132);
             mouseBehaviorExtension5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension5.HoverForecolor = System.Drawing.Color.Goldenrod;
             mouseBehaviorExtension5.HoverImage = null;
@@ -204,7 +215,7 @@
             this.animatedButton2.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.animatedButton2.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton2.Location = new System.Drawing.Point(0, 66);
+            this.animatedButton2.Location = new System.Drawing.Point(1, 66);
             mouseBehaviorExtension6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension6.HoverForecolor = System.Drawing.Color.Goldenrod;
             mouseBehaviorExtension6.HoverImage = null;
@@ -221,10 +232,11 @@
             this.animatedButton2.Text = "Contactos";
             this.animatedButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.animatedButton2.UseVisualStyleBackColor = false;
+            this.animatedButton2.Click += new System.EventHandler(this.animatedButton2_Click);
             // 
             // cmdMinimize
             // 
-            this.cmdMinimize.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.cmdMinimize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.cmdMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.cmdMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cmdMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -247,7 +259,7 @@
             // 
             // cmdClose
             // 
-            this.cmdClose.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.cmdClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.cmdClose.FlatAppearance.BorderSize = 0;
             this.cmdClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.cmdClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -267,7 +279,13 @@
             this.cmdClose.Size = new System.Drawing.Size(23, 23);
             this.cmdClose.TabIndex = 0;
             this.cmdClose.UseVisualStyleBackColor = true;
-            this.cmdClose.Click += new System.EventHandler(this.animatedButton1_Click_1);
+            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
+            // 
+            // borderDrawer1
+            // 
+            this.borderDrawer1.BorderGotFocus = System.Drawing.Color.Red;
+            this.borderDrawer1.BorderLostFocus = System.Drawing.Color.DimGray;
+            this.borderDrawer1.Owner = this.textBox1;
             // 
             // FrmMain
             // 
@@ -276,6 +294,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(848, 404);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panelWindow1);
             this.Controls.Add(this.animatedButton6);
             this.Controls.Add(this.animatedButton5);
@@ -290,8 +309,12 @@
             this.MinimizeBox = false;
             this.Name = "FrmMain";
             this.ShowIcon = false;
-            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmMain_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseUp);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -307,6 +330,8 @@
         private Controls.AnimatedButton animatedButton5;
         private Controls.AnimatedButton animatedButton6;
         private PanelWindow panelWindow1;
+        private System.Windows.Forms.TextBox textBox1;
+        private BorderDrawer borderDrawer1;
       
 
     }

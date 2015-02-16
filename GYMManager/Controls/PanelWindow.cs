@@ -8,6 +8,7 @@ class PanelWindow:System.Windows.Forms.Panel
 
     private System.Windows.Forms.Button _ButtonOwner;
     private bool _IsVisible = false;
+        
 
     public System.Windows.Forms.Button OwnerButton { 
         get{ 
@@ -19,20 +20,22 @@ class PanelWindow:System.Windows.Forms.Panel
                 if (!this.DesignMode){
                     this.Visible = _IsVisible = false;
                 }
-                _ButtonOwner.Click += new EventHandler(_OwnerClick);
-
+                _ButtonOwner.Click += new EventHandler(_OwnerClick);                
             }
         }
     
     }
-
-    private void _OwnerClick(object sender, object e) {
-        if (!this.DesignMode) { 
-         _IsVisible = !_IsVisible;
-        this.Visible = _IsVisible;
-        }
        
+    private void _OwnerClick(object sender, object e) {
+        
+            if (!this.DesignMode)
+            {
+                _IsVisible = !_IsVisible;
+                this.Visible = _IsVisible;
+            }
+        
     }
+
 
 
 }

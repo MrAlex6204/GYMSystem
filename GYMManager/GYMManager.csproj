@@ -50,6 +50,7 @@
     <Compile Include="Controls\AnimatedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\BorderDrawer.cs" />
     <Compile Include="Controls\MouseBehaviorExtension.cs" />
     <Compile Include="Controls\PanelWindow.cs">
       <SubType>Component</SubType>

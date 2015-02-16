@@ -9,10 +9,11 @@ namespace GYMManager.Controls
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class MouseBehaviorExtension
     {
-
-      
+                
+               
 
         #region Properties
+               
 
         private string _HoverTex = null, _LeaveText = null;
         [Category("Hover")]
@@ -27,8 +28,7 @@ namespace GYMManager.Controls
             get { return _LeaveText; }
             set { _LeaveText = value; }
         }
-
-
+        
         private System.Drawing.Color _HoverColor, _LeaveColor;
         [Category("Hover")]
         public System.Drawing.Color HoverColor
@@ -77,15 +77,13 @@ namespace GYMManager.Controls
         #endregion
 
         #region Functions
-        
+       
         public override string ToString()
         {
             return "Mouse Event Adicional Behavior";
         }
 
         #endregion
-
         
-
     }
 }

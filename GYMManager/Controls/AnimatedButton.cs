@@ -24,9 +24,7 @@ namespace GYMManager.Controls
 
             return "Button";
         }
-
-
-
+        
         protected override void OnMouseLeave(EventArgs e)
         {
             //===>Set values when the mouse leave
