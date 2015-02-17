@@ -12,14 +12,14 @@ using System.Drawing;
         private  Pen _Pen  = new Pen(Brushes.DimGray, 1);
         public event EventHandler Disposed;
                 
-        public System.Drawing.Color BorderGotFocus
+        public System.Drawing.Color FocusColor
         {
             get;
             set;
         }
 
         
-         public System.Drawing.Color BorderLostFocus
+         public System.Drawing.Color LostFocusColor
         {
             get;
             set;
@@ -39,8 +39,8 @@ using System.Drawing;
                 _Owner = value;
                 if (_Owner != null) {
                     _Owner.LostFocus += new EventHandler(_LostFocus);
-                    _Owner.GotFocus += new EventHandler(_GotFocus);
-                    DrawBorder(ref _Owner, this.BorderLostFocus);                   
+                    _Owner.Paint += new System.Windows.Forms.PaintEventHandler(_OnPaint);
+                    DrawBorder(ref _Owner, this.LostFocusColor);                   
                 }
             }
         }
@@ -56,14 +56,18 @@ using System.Drawing;
             System.Drawing.Rectangle Rectangle = new Rectangle(OwnerControl.Location, Size);                        
             Graphic.DrawRectangle(this.Pen, Rectangle);
         }
-                
+
+        private void _OnPaint(object sender, EventArgs e) {
+            DrawBorder(ref _Owner, LostFocusColor);
+        }
+        
         private void _GotFocus(object sender, EventArgs e) {
 
-            DrawBorder(ref _Owner, BorderGotFocus);
+            DrawBorder(ref _Owner, FocusColor);
         }
         private void _LostFocus(object sender,  EventArgs e)
         {
-            DrawBorder(ref _Owner, BorderLostFocus);
+            DrawBorder(ref _Owner, LostFocusColor);
         }
         
 

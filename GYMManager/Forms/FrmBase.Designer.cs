@@ -283,8 +283,8 @@
             // 
             // borderDrawer1
             // 
-            this.borderDrawer1.BorderGotFocus = System.Drawing.Color.Red;
-            this.borderDrawer1.BorderLostFocus = System.Drawing.Color.DimGray;
+            this.borderDrawer1.FocusColor = System.Drawing.Color.Red;
+            this.borderDrawer1.LostFocusColor = System.Drawing.Color.DimGray;
             this.borderDrawer1.Owner = this.textBox1;
             // 
             // FrmMain
