@@ -48,7 +48,7 @@
             this.animatedButton2 = new GYMManager.Controls.AnimatedButton();
             this.cmdMinimize = new GYMManager.Controls.AnimatedButton();
             this.cmdClose = new GYMManager.Controls.AnimatedButton();
-            this.borderDrawer1 = new BorderDrawer();
+            this.focusBehaviorExtension1 = new FocusBehaviorExtension();
             this.SuspendLayout();
             // 
             // lblClose
@@ -70,10 +70,10 @@
             // panelWindow1
             // 
             this.panelWindow1.BackColor = System.Drawing.Color.White;
-            this.panelWindow1.Location = new System.Drawing.Point(154, 208);
+            this.panelWindow1.Location = new System.Drawing.Point(154, 172);
             this.panelWindow1.Name = "panelWindow1";
             this.panelWindow1.OwnerButton = this.cmdHome;
-            this.panelWindow1.Size = new System.Drawing.Size(682, 184);
+            this.panelWindow1.Size = new System.Drawing.Size(682, 220);
             this.panelWindow1.TabIndex = 8;
             // 
             // cmdHome
@@ -102,6 +102,7 @@
             this.cmdHome.Text = "       Home";
             this.cmdHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdHome.UseVisualStyleBackColor = false;
+            this.cmdHome.Click += new System.EventHandler(this.cmdHome_Click);
             // 
             // animatedButton6
             // 
@@ -111,7 +112,7 @@
             this.animatedButton6.Font = new System.Drawing.Font("Segoe UI", 9.25F);
             this.animatedButton6.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton6.Location = new System.Drawing.Point(1, 330);
+            this.animatedButton6.Location = new System.Drawing.Point(1, 328);
             mouseBehaviorExtension2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension2.HoverForecolor = System.Drawing.Color.Goldenrod;
             mouseBehaviorExtension2.HoverImage = null;
@@ -281,11 +282,15 @@
             this.cmdClose.UseVisualStyleBackColor = true;
             this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
             // 
-            // borderDrawer1
+            // focusBehaviorExtension1
             // 
-            this.borderDrawer1.FocusColor = System.Drawing.Color.Red;
-            this.borderDrawer1.LostFocusColor = System.Drawing.Color.DimGray;
-            this.borderDrawer1.Owner = this.textBox1;
+            this.focusBehaviorExtension1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.focusBehaviorExtension1.BorderWidth = 1;
+            this.focusBehaviorExtension1.ControlOwner = this.textBox1;
+            this.focusBehaviorExtension1.FocusBgColor = System.Drawing.Color.DimGray;
+            this.focusBehaviorExtension1.FocusBorderColor = System.Drawing.Color.Red;
+            this.focusBehaviorExtension1.LostFocusBgColor = System.Drawing.Color.White;
+            this.focusBehaviorExtension1.LostFocusBorderColor = System.Drawing.Color.Silver;
             // 
             // FrmMain
             // 
@@ -293,7 +298,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(848, 404);
-            this.ControlBox = false;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panelWindow1);
             this.Controls.Add(this.animatedButton6);
@@ -309,6 +313,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmMain";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmMain_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
@@ -331,7 +336,7 @@
         private Controls.AnimatedButton animatedButton6;
         private PanelWindow panelWindow1;
         private System.Windows.Forms.TextBox textBox1;
-        private BorderDrawer borderDrawer1;
+        private FocusBehaviorExtension focusBehaviorExtension1;
       
 
     }

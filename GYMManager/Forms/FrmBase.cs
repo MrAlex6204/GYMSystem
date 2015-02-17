@@ -12,7 +12,7 @@ namespace GYMManager
     public partial class FrmMain : Form
     {
         private bool _bFlagMouseDown = false;
-        private int offSetX = 0,OffSetY= 0;
+        private int offSetX = 0, OffSetY = 0;
 
 
 
@@ -22,26 +22,30 @@ namespace GYMManager
         }
 
 
-        private void _DrawBorders() {
+        private void _DrawBorders()
+        {
             System.Drawing.Graphics Graphic = this.CreateGraphics();
             System.Drawing.Point Location = new System.Drawing.Point(0, 0);
             System.Drawing.Size Size = new System.Drawing.Size(this.Width - 1, this.Height - 1);
 
             System.Drawing.Rectangle Rectangle = new Rectangle(Location, Size);
-            System.Drawing.Pen Pen = new Pen(Brushes.DimGray, 1);
+            System.Drawing.Pen Pen = new Pen(Brushes.Red, 1);
             Pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            Graphic.DrawRectangle(Pen, Rectangle);        
+            Graphic.DrawRectangle(Pen, Rectangle);
         }
+
+   
+
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            _DrawBorders();
+           _DrawBorders();
         }
 
         private void animatedButton1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }     
+        }
 
         private void cmdMinimize_Click(object sender, EventArgs e)
         {
@@ -50,7 +54,7 @@ namespace GYMManager
 
         private void FrmMain_Paint(object sender, PaintEventArgs e)
         {
-            _DrawBorders();
+
         }
 
         private void FrmMain_MouseDown(object sender, MouseEventArgs e)
@@ -65,16 +69,16 @@ namespace GYMManager
         {
             _bFlagMouseDown = false;
             this.Cursor = Cursors.Default;
-        }     
+        }
 
         private void FrmMain_MouseMove(object sender, MouseEventArgs e)
         {
             if (_bFlagMouseDown)
-            {               
-                this.Top = Cursor.Position.Y  - OffSetY;
-                this.Left    = Cursor.Position.X - offSetX;
+            {
+                this.Top = Cursor.Position.Y - OffSetY;
+                this.Left = Cursor.Position.X - offSetX;
             }
-            
+
         }
 
         private void cmdClose_Click(object sender, EventArgs e)
@@ -84,8 +88,19 @@ namespace GYMManager
 
         private void animatedButton2_Click(object sender, EventArgs e)
         {
-         
+          
         }
- 
+
+        private void cmdHome_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

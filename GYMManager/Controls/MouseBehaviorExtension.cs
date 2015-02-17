@@ -8,8 +8,7 @@ namespace GYMManager.Controls
 
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class MouseBehaviorExtension
-    {
-                
+    {               
                
 
         #region Properties
