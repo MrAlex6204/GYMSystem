@@ -338,7 +338,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private FocusBehaviorExtension focusBehaviorExtension1;
       
-
     }
 }
 
