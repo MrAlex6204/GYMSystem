@@ -38,9 +38,6 @@
             GYMManager.Controls.MouseBehaviorExtension mouseBehaviorExtension7 = new GYMManager.Controls.MouseBehaviorExtension();
             GYMManager.Controls.MouseBehaviorExtension mouseBehaviorExtension8 = new GYMManager.Controls.MouseBehaviorExtension();
             this.lblClose = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelWindow1 = new PanelWindow();
             this.cmdHome = new GYMManager.Controls.AnimatedButton();
             this.animatedButton6 = new GYMManager.Controls.AnimatedButton();
@@ -60,41 +57,13 @@
             this.lblClose.Size = new System.Drawing.Size(49, 23);
             this.lblClose.TabIndex = 0;
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(369, 132);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(369, 47);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(586, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panelWindow1
             // 
-            this.panelWindow1.Location = new System.Drawing.Point(154, 172);
+            this.panelWindow1.BackColor = System.Drawing.Color.White;
+            this.panelWindow1.Location = new System.Drawing.Point(153, 44);
             this.panelWindow1.Name = "panelWindow1";
             this.panelWindow1.OwnerButton = this.cmdHome;
-            this.panelWindow1.Size = new System.Drawing.Size(682, 220);
+            this.panelWindow1.Size = new System.Drawing.Size(793, 519);
             this.panelWindow1.TabIndex = 8;
             // 
             // cmdHome
@@ -106,7 +75,7 @@
             this.cmdHome.ForeColor = System.Drawing.Color.DimGray;
             this.cmdHome.Image = global::GYMManager.Properties.Resources.ic_home_grey600_24dp;
             this.cmdHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdHome.Location = new System.Drawing.Point(1, 1);
+            this.cmdHome.Location = new System.Drawing.Point(0, 86);
             mouseBehaviorExtension1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension1.HoverForecolor = System.Drawing.Color.Silver;
             mouseBehaviorExtension1.HoverImage = global::GYMManager.Properties.Resources.ic_home_white_24dp;
@@ -134,7 +103,7 @@
             this.animatedButton6.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton6.Image = global::GYMManager.Properties.Resources.ic_settings_grey600_24dp;
             this.animatedButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton6.Location = new System.Drawing.Point(1, 329);
+            this.animatedButton6.Location = new System.Drawing.Point(0, 414);
             mouseBehaviorExtension2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension2.HoverForecolor = System.Drawing.Color.Silver;
             mouseBehaviorExtension2.HoverImage = global::GYMManager.Properties.Resources.ic_settings_white_24dp;
@@ -161,7 +130,7 @@
             this.animatedButton5.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton5.Image = global::GYMManager.Properties.Resources.ic_report_problem_grey600_24dp;
             this.animatedButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton5.Location = new System.Drawing.Point(1, 264);
+            this.animatedButton5.Location = new System.Drawing.Point(0, 349);
             mouseBehaviorExtension3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension3.HoverForecolor = System.Drawing.Color.Silver;
             mouseBehaviorExtension3.HoverImage = global::GYMManager.Properties.Resources.ic_report_problem_white_24dp;
@@ -188,7 +157,7 @@
             this.animatedButton4.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton4.Image = global::GYMManager.Properties.Resources.ic_assessment_grey600_24dp;
             this.animatedButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton4.Location = new System.Drawing.Point(1, 198);
+            this.animatedButton4.Location = new System.Drawing.Point(0, 283);
             mouseBehaviorExtension4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension4.HoverForecolor = System.Drawing.Color.Silver;
             mouseBehaviorExtension4.HoverImage = global::GYMManager.Properties.Resources.ic_assessment_white_24dp;
@@ -215,7 +184,7 @@
             this.animatedButton3.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton3.Image = global::GYMManager.Properties.Resources.ic_credit_card_grey600_24dp;
             this.animatedButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton3.Location = new System.Drawing.Point(1, 132);
+            this.animatedButton3.Location = new System.Drawing.Point(0, 217);
             mouseBehaviorExtension5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension5.HoverForecolor = System.Drawing.Color.Silver;
             mouseBehaviorExtension5.HoverImage = global::GYMManager.Properties.Resources.ic_credit_card_white_24dp;
@@ -242,7 +211,7 @@
             this.animatedButton2.ForeColor = System.Drawing.Color.DimGray;
             this.animatedButton2.Image = global::GYMManager.Properties.Resources.ic_account_box_grey600_24dp;
             this.animatedButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton2.Location = new System.Drawing.Point(1, 66);
+            this.animatedButton2.Location = new System.Drawing.Point(0, 151);
             mouseBehaviorExtension6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension6.HoverForecolor = System.Drawing.Color.Silver;
             mouseBehaviorExtension6.HoverImage = global::GYMManager.Properties.Resources.ic_account_box_white_24dp;
@@ -269,7 +238,7 @@
             this.cmdMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cmdMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdMinimize.Image = ((System.Drawing.Image)(resources.GetObject("cmdMinimize.Image")));
-            this.cmdMinimize.Location = new System.Drawing.Point(790, 14);
+            this.cmdMinimize.Location = new System.Drawing.Point(900, 19);
             mouseBehaviorExtension7.HoverColor = System.Drawing.Color.Empty;
             mouseBehaviorExtension7.HoverForecolor = System.Drawing.Color.Empty;
             mouseBehaviorExtension7.HoverImage = ((System.Drawing.Image)(resources.GetObject("mouseBehaviorExtension7.HoverImage")));
@@ -294,7 +263,7 @@
             this.cmdClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdClose.Image = global::GYMManager.Properties.Resources.close_normal_pic;
-            this.cmdClose.Location = new System.Drawing.Point(813, 7);
+            this.cmdClose.Location = new System.Drawing.Point(923, 12);
             mouseBehaviorExtension8.HoverColor = System.Drawing.Color.Empty;
             mouseBehaviorExtension8.HoverForecolor = System.Drawing.Color.Empty;
             mouseBehaviorExtension8.HoverImage = global::GYMManager.Properties.Resources.close_hover_pic1;
@@ -314,7 +283,7 @@
             // 
             this.focusBehaviorExtension1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.focusBehaviorExtension1.BorderWidth = 10F;
-            this.focusBehaviorExtension1.ControlOwner = this.textBox1;
+            this.focusBehaviorExtension1.ControlOwner = null;
             this.focusBehaviorExtension1.FocusBgColor = System.Drawing.Color.DimGray;
             this.focusBehaviorExtension1.FocusBorderColor = System.Drawing.Color.Goldenrod;
             this.focusBehaviorExtension1.LostFocusBgColor = System.Drawing.Color.White;
@@ -325,10 +294,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(848, 404);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(958, 575);
             this.Controls.Add(this.panelWindow1);
             this.Controls.Add(this.animatedButton6);
             this.Controls.Add(this.animatedButton5);
@@ -349,7 +315,6 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseUp);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -364,11 +329,8 @@
         private Controls.AnimatedButton animatedButton4;
         private Controls.AnimatedButton animatedButton5;
         private Controls.AnimatedButton animatedButton6;
-        private PanelWindow panelWindow1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private FocusBehaviorExtension focusBehaviorExtension1;
-        private System.Windows.Forms.Button button1;
+        private PanelWindow panelWindow1;
       
     }
 }

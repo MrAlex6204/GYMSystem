@@ -104,5 +104,10 @@ namespace GYMManager
             focusBehaviorExtension1.DrawBorder(Color.Red);
         }
 
+        private void animatedButton1_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
     }
 }
