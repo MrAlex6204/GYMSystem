@@ -13,7 +13,7 @@ class FocusBehaviorExtension : IComponent
 
     public event EventHandler Disposed;
 
-    public int BorderWidth
+    public float BorderWidth
     {
         get;
         set;
@@ -39,7 +39,6 @@ class FocusBehaviorExtension : IComponent
         get;
         set;
     }
-
     public System.Drawing.Color LostFocusBgColor
     {
         get;
@@ -53,60 +52,79 @@ class FocusBehaviorExtension : IComponent
             _Owner = value;
             if (_Owner != null)
             {
-                Debug.Print("Value assigned\n");
-                _Owner.GotFocus += new EventHandler(_GotFocus);
-                _Owner.LostFocus += new EventHandler(_LostFocus);
+                
                 _Owner.Paint += new System.Windows.Forms.PaintEventHandler(_OnPaint);
-                DrawBorder();
+                _Owner.GotFocus += new EventHandler(_GotFocus);
+                _Owner.LostFocus += new EventHandler(_LostFocus);                
+                DrawBorder(this.LostFocusBorderColor);
+                SetBgColor(this.LostFocusBgColor);
             }
         }
     }
 
-    public void DrawBorder()
+    public void DrawBorder(System.Drawing.Color BorderColor)
     {
-        System.Drawing.Graphics Graphic = _Owner.CreateGraphics();
-        System.Drawing.Point Location = _Owner.Location;
-        System.Drawing.Size Size = _Owner.Size;
+        using (Graphics g = _Owner.CreateGraphics())
+        {
+            System.Drawing.Rectangle Rectangle = new Rectangle(10,10, 50,50);
+            System.Drawing.Pen Pen = new Pen(Brushes.Red, this.BorderWidth);
 
-        System.Drawing.Rectangle Rectangle = new Rectangle(Location, Size);
-        System.Drawing.Pen Pen = new Pen(Brushes.Red, 1);
-        Pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-        _Owner.CreateGraphics().DrawRectangle(Pen, Rectangle);        
+            Pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            g.DrawRectangle(Pen, Rectangle);
+            Debug.Print("Border drawed!");
+        }
+        
     }
 
-    private void _OnPaint(object sender,System.Windows.Forms.PaintEventArgs e)
-    {
-      
+    private void SetBgColor(System.Drawing.Color BgColor) {
+        _Owner.BackColor = BgColor;
+    }
+    private void _OnPaint(object sender, System.Windows.Forms.PaintEventArgs e) {
+        
+            System.Drawing.Rectangle Rectangle = new Rectangle(_Owner.Location, _Owner.Size);
+            System.Drawing.Pen Pen = new Pen(Brushes.Red, this.BorderWidth);
+
+            Pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            e.Graphics.DrawRectangle(Pen, Rectangle);
+            Debug.Print("On Paint!");
+        
+    
     }
     private void _GotFocus(object sender, EventArgs e)
     {
-              
-        DrawBorder();
+       
         if (this.FocusBgColor != null) {
-            _Owner.BackColor = this.FocusBgColor;
+            SetBgColor(this.FocusBgColor);
+            
         }
-
+        if (this.FocusBorderColor != null) {
+            DrawBorder(this.FocusBorderColor);
+        }
+        
     }
     private void _LostFocus(object sender, EventArgs e)
-    {      
-        DrawBorder();
+    {     
+        
         if (this.LostFocusBorderColor != null) {
-            _Owner.BackColor = this.LostFocusBgColor;
+            SetBgColor(this.LostFocusBgColor);
+           
         }
+        if (this.LostFocusBorderColor != null) {
+            DrawBorder(this.LostFocusBorderColor);
+        }
+
     }
-
-
-
+    
     [Browsable(false)]
     public ISite Site
     {
         get;
         set;
     }
-
     public void Dispose()
     {
 
     }
+
 }
 

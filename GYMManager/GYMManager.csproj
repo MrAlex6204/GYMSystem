@@ -11,6 +11,7 @@
     <AssemblyName>GYMManager</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -38,6 +38,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>
     </DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -125,6 +126,19 @@
     <Content Include="dbGYM.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\ic_settings_white_24dp.png" />
+    <None Include="Resources\ic_settings_grey600_24dp.png" />
+    <None Include="Resources\ic_report_problem_white_24dp.png" />
+    <None Include="Resources\ic_perm_scan_wifi_white_24dp.png" />
+    <None Include="Resources\ic_report_problem_grey600_24dp.png" />
+    <None Include="Resources\ic_credit_card_white_24dp.png" />
+    <None Include="Resources\ic_credit_card_grey600_24dp.png" />
+    <None Include="Resources\ic_assessment_white_24dp.png" />
+    <None Include="Resources\ic_account_box_white_24dp.png" />
+    <None Include="Resources\ic_assignment_black_24dp.png" />
+    <None Include="Resources\ic_assessment_grey600_24dp.png" />
+    <None Include="Resources\ic_account_box_black_24dp.png" />
+    <None Include="Resources\ic_account_box_grey600_24dp.png" />
     <None Include="Resources\ic_home_white_24dp.png" />
     <None Include="Resources\ic_home_grey600_24dp.png" />
     <None Include="Resources\ic_home_black_24dp.png" />

@@ -93,6 +93,86 @@ namespace GYMManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_account_box_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_account_box_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_account_box_grey600_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_account_box_grey600_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_account_box_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_account_box_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_assessment_grey600_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_assessment_grey600_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_assessment_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_assessment_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_assignment_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_assignment_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_credit_card_grey600_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_credit_card_grey600_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_credit_card_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_credit_card_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_home_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("ic_home_black_24dp", resourceCulture);
@@ -116,6 +196,56 @@ namespace GYMManager.Properties {
         internal static System.Drawing.Bitmap ic_home_white_24dp {
             get {
                 object obj = ResourceManager.GetObject("ic_home_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_perm_scan_wifi_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_perm_scan_wifi_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_report_problem_grey600_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_report_problem_grey600_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_report_problem_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_report_problem_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_settings_grey600_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_settings_grey600_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_settings_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_settings_white_24dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
