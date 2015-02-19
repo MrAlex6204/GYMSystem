@@ -126,6 +126,11 @@
     <Content Include="dbGYM.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="TargetDesign\ButtonDesign.png" />
+    <Content Include="TargetDesign\LstDesign.png" />
+    <Content Include="TargetDesign\LstDesign2.png" />
+    <Content Include="TargetDesign\MainWindow.png" />
+    <Content Include="TargetDesign\TextBoxesDesign.png" />
     <None Include="Resources\ic_settings_white_24dp.png" />
     <None Include="Resources\ic_settings_grey600_24dp.png" />
     <None Include="Resources\ic_report_problem_white_24dp.png" />
@@ -171,6 +176,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
