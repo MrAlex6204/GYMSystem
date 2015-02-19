@@ -16,6 +16,7 @@ namespace GYMManager
             try
             {
                 Application.SetCompatibleTextRenderingDefault(false);
+                Settings.Load();//===>Load Application DbSettings
                 Application.Run(new FrmMain());
             }
             catch (Exception ex)

@@ -7,21 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Data.SQLTransac;
-namespace GYMManager
-{
-    public partial class FrmMain : Form
+
+    public partial class FrmBase : Form
     {
         private bool _bFlagMouseDown = false;
         private int offSetX = 0, OffSetY = 0;
 
 
 
-        public FrmMain()
+        public FrmBase()
         {
             InitializeComponent();
+            cmdMinimize.Visible = this.MinimizeBox;
         }
-
-
+        
         private void _DrawBorders()
         {
             System.Drawing.Graphics Graphic = this.CreateGraphics();
@@ -48,12 +47,7 @@ namespace GYMManager
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void FrmMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void FrmMain_MouseDown(object sender, MouseEventArgs e)
         {
             _bFlagMouseDown = true;
@@ -85,29 +79,12 @@ namespace GYMManager
 
         private void animatedButton2_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void cmdHome_Click(object sender, EventArgs e)
         {
 
-
         }
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            focusBehaviorExtension1.DrawBorder(Color.Red);
-        }
-
-        private void animatedButton1_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-
+        
     }
-}

@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 using System.ComponentModel;
-namespace GYMManager.Controls
-{
+
    
     class AnimatedButton : System.Windows.Forms.Button
     {
@@ -74,4 +73,4 @@ namespace GYMManager.Controls
         }
 
     }
-}
+

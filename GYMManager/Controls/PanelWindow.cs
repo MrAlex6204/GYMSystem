@@ -7,16 +7,17 @@ class PanelWindow:System.Windows.Forms.Panel
 {
 
     private System.Windows.Forms.Button _ButtonOwner;
-    private GYMManager.Controls.AnimatedButton cmdClosePanel;
-    GYMManager.Controls.MouseBehaviorExtension mouseBehaviorExtension1 = new GYMManager.Controls.MouseBehaviorExtension();
+   private AnimatedButton cmdClosePanel;
+    MouseBehaviorExtension mouseBehaviorExtension1 = new MouseBehaviorExtension();
 
     public PanelWindow() {
         this.InitilizeComponents();
     }
 
     public void InitilizeComponents() {
-        GYMManager.Controls.MouseBehaviorExtension mouseBehaviorExtension1 = new GYMManager.Controls.MouseBehaviorExtension();
-        this.cmdClosePanel = new GYMManager.Controls.AnimatedButton();
+        MouseBehaviorExtension mouseBehaviorExtension1 = new MouseBehaviorExtension();       
+        this.cmdClosePanel = new AnimatedButton();
+        this.cmdClosePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));        
         this.cmdClosePanel.BackColor = System.Drawing.Color.Transparent;
         this.cmdClosePanel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
         this.cmdClosePanel.FlatAppearance.BorderSize = 0;
@@ -24,7 +25,7 @@ class PanelWindow:System.Windows.Forms.Panel
         this.cmdClosePanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
         this.cmdClosePanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmdClosePanel.Image = global::GYMManager.Properties.Resources.close_normal_pic;
-        this.cmdClosePanel.Location = new System.Drawing.Point(0, 0);
+        this.cmdClosePanel.Location = new System.Drawing.Point(175, 2);
         mouseBehaviorExtension1.HoverColor = System.Drawing.Color.Empty;
         mouseBehaviorExtension1.HoverForecolor = System.Drawing.Color.Empty;
         mouseBehaviorExtension1.HoverImage = global::GYMManager.Properties.Resources.close_hover_pic1;

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.ComponentModel;
-namespace GYMManager.Controls
-{
+
 
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class MouseBehaviorExtension
@@ -85,4 +84,4 @@ namespace GYMManager.Controls
         #endregion
         
     }
-}
+
