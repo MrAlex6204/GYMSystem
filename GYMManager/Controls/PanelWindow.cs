@@ -71,7 +71,6 @@ class PanelWindow : System.Windows.Forms.Panel {
     private void _OwnerClick(object sender, object e) {
 
         if (!this.DesignMode) {
-
             this.Visible = !this.Visible;
         }
 
