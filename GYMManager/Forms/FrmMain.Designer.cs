@@ -220,16 +220,16 @@
             // panelWindow1
             // 
             this.panelWindow1.BackColor = System.Drawing.Color.White;
-            this.panelWindow1.Location = new System.Drawing.Point(175, 58);
+            this.panelWindow1.Location = new System.Drawing.Point(175, 63);
             this.panelWindow1.Name = "panelWindow1";
             this.panelWindow1.OwnerButton = null;
-            this.panelWindow1.Size = new System.Drawing.Size(794, 373);
+            this.panelWindow1.Size = new System.Drawing.Size(794, 368);
             this.panelWindow1.TabIndex = 14;
             // 
             // picLogo
             // 
             this.picLogo.Image = global::GYMManager.Properties.Resources.GYM_LOGO;
-            this.picLogo.Location = new System.Drawing.Point(175, 2);
+            this.picLogo.Location = new System.Drawing.Point(175, 7);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(100, 50);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,8 +238,8 @@
             // 
             // lblGYMTitle
             // 
-            this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.lblGYMTitle.Location = new System.Drawing.Point(281, 2);
+            this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20F);
+            this.lblGYMTitle.Location = new System.Drawing.Point(281, 7);
             this.lblGYMTitle.Name = "lblGYMTitle";
             this.lblGYMTitle.Size = new System.Drawing.Size(636, 50);
             this.lblGYMTitle.TabIndex = 16;
