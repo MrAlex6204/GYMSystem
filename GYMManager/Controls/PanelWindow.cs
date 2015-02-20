@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-class PanelWindow:System.Windows.Forms.Panel
-{
+class PanelWindow : System.Windows.Forms.Panel {
 
+    private bool _bFlagShowCloseButton = true;
     private System.Windows.Forms.Button _ButtonOwner;
-   private AnimatedButton cmdClosePanel;
+    private AnimatedButton cmdClosePanel;
     MouseBehaviorExtension mouseBehaviorExtension1 = new MouseBehaviorExtension();
 
     public PanelWindow() {
@@ -15,9 +15,9 @@ class PanelWindow:System.Windows.Forms.Panel
     }
 
     public void InitilizeComponents() {
-        MouseBehaviorExtension mouseBehaviorExtension1 = new MouseBehaviorExtension();       
+        MouseBehaviorExtension mouseBehaviorExtension1 = new MouseBehaviorExtension();
         this.cmdClosePanel = new AnimatedButton();
-        this.cmdClosePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));        
+        this.cmdClosePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
         this.cmdClosePanel.BackColor = System.Drawing.Color.Transparent;
         this.cmdClosePanel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
         this.cmdClosePanel.FlatAppearance.BorderSize = 0;
@@ -42,31 +42,39 @@ class PanelWindow:System.Windows.Forms.Panel
         this.cmdClosePanel.Click += new System.EventHandler(this._PanelClose);
         this.Controls.Add(this.cmdClosePanel);
     }
-    
-    public System.Windows.Forms.Button OwnerButton { 
-        get{ 
+
+    public bool ShowCloseButton {
+        get {
+            return _bFlagShowCloseButton;
+        }
+        set {
+            cmdClosePanel.Visible = _bFlagShowCloseButton = value;
+        }
+    }
+
+    public System.Windows.Forms.Button OwnerButton {
+        get {
             return _ButtonOwner;
         }
-        set{
+        set {
             _ButtonOwner = value;
             if (value != null) {
-                if (!this.DesignMode){
-                    this.Visible =  false;
+                if (!this.DesignMode) {
+                    this.Visible = false;
                 }
-                _ButtonOwner.Click += new EventHandler(_OwnerClick);                
+                _ButtonOwner.Click += new EventHandler(_OwnerClick);
             }
         }
-    
-    }
-       
-    private void _OwnerClick(object sender, object e) {
-        
-            if (!this.DesignMode)
-            {
 
-                this.Visible = !this.Visible;
-            }
-        
+    }
+
+    private void _OwnerClick(object sender, object e) {
+
+        if (!this.DesignMode) {
+
+            this.Visible = !this.Visible;
+        }
+
     }
 
     private void _PanelClose(object sender, EventArgs e) {
