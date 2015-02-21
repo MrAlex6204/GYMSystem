@@ -30,7 +30,7 @@ class AnimatedButton : System.Windows.Forms.Button {
         return "Button";
     }
 
-    private void _ActiveButton() {//Set button active button design
+    public void ActiveButton() {//Set button active button design
         if (this.MouseBehavior.HoverImage != null) {
             this.Image = this.MouseBehavior.HoverImage;
         }
@@ -43,10 +43,14 @@ class AnimatedButton : System.Windows.Forms.Button {
         if (this.MouseBehavior.HoverColor != null) {
             this.BackColor = this.MouseBehavior.HoverColor;
         }
+        if (this.MouseBehavior.HoverBorderColor != null) {
+            this.FlatAppearance.BorderColor = this.MouseBehavior.HoverBorderColor;
+        }
+        _bFlagIsActive = true;
         this.Refresh();
     }
 
-    private void _DesactiveButton() {//Set button desactive design
+    public void DesactiveButton() {//Set button desactive design
         if (this.MouseBehavior.LeaveImage != null) {
             this.Image = this.MouseBehavior.LeaveImage;
         }
@@ -59,29 +63,32 @@ class AnimatedButton : System.Windows.Forms.Button {
         if (this.MouseBehavior.LeaveColor != null) {
             this.BackColor = this.MouseBehavior.LeaveColor;
         }
+        if (this.MouseBehavior.LeaveBorderColor != null) {
+            this.FlatAppearance.BorderColor = this.MouseBehavior.LeaveBorderColor;
+        }
+        _bFlagIsActive = false;
         this.Refresh();
     }
+
     #region Events
 
     protected override void OnClick(EventArgs e) {
-
+        base.OnClick(e);
         if (this.SetAsToggleButton) {
-            _bFlagIsActive = !_bFlagIsActive;
-
             if (_bFlagIsActive) {
-                _ActiveButton();
+                DesactiveButton();
             } else {
-                _DesactiveButton();
+                ActiveButton();
             }
         }
 
-        base.OnClick(e);
+
     }
 
     protected override void OnMouseLeave(EventArgs e) {
         //===>Set values when the mouse leave
         if (!this.SetAsToggleButton) {
-            _DesactiveButton();
+            DesactiveButton();
         }
         base.OnMouseLeave(e);
     }
@@ -90,7 +97,7 @@ class AnimatedButton : System.Windows.Forms.Button {
         //===>Set values when the mouse hover
 
         if (!this.SetAsToggleButton) {
-            _ActiveButton();
+            ActiveButton();
         }
         base.OnMouseHover(e);
     }

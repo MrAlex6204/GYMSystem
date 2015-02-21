@@ -13,21 +13,26 @@ class FocusBehaviorExtension : IComponent
 
     public event EventHandler Disposed;
 
+    #region Properties
+
     public float BorderWidth
     {
         get;
         set;
     }
+
     public System.Drawing.Color FocusBorderColor
     {
         get;
         set;
     }
+
     public System.Drawing.Color LostFocusBorderColor
     {
         get;
         set;
     }
+
     public System.Drawing.Drawing2D.DashStyle BorderStyle
     {
         get;
@@ -39,11 +44,13 @@ class FocusBehaviorExtension : IComponent
         get;
         set;
     }
+
     public System.Drawing.Color LostFocusBgColor
     {
         get;
         set;    
     }
+
     public System.Windows.Forms.Control ControlOwner
     {
         get { return _Owner; }
@@ -76,9 +83,14 @@ class FocusBehaviorExtension : IComponent
         
     }
 
+    #endregion
+
+    #region Functions
+
     private void SetBgColor(System.Drawing.Color BgColor) {
         _Owner.BackColor = BgColor;
     }
+
     private void _OnPaint(object sender, System.Windows.Forms.PaintEventArgs e) {
         
             System.Drawing.Rectangle Rectangle = new Rectangle(_Owner.Location, _Owner.Size);
@@ -90,6 +102,7 @@ class FocusBehaviorExtension : IComponent
         
     
     }
+
     private void _GotFocus(object sender, EventArgs e)
     {
        
@@ -102,6 +115,7 @@ class FocusBehaviorExtension : IComponent
         }
         
     }
+
     private void _LostFocus(object sender, EventArgs e)
     {     
         
@@ -121,10 +135,13 @@ class FocusBehaviorExtension : IComponent
         get;
         set;
     }
+
     public void Dispose()
     {
 
     }
 
+    #endregion
 }
+
 

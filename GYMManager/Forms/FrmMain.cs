@@ -14,5 +14,13 @@ using System.Windows.Forms;
             InitializeComponent();
             lblGYMTitle.Text = Settings.GYMTitle;
         }
+
+        private void cmdAddPartner_Click(object sender, EventArgs e) {
+            this.pnlWndAddPartner.Visible = true;
+        }
+
+        private void animatedButton1_Click(object sender, EventArgs e) {
+            MessageBox.Show("Ok");
+        }
     }
 
