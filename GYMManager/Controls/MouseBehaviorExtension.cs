@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 [TypeConverter(typeof(ExpandableObjectConverter))]
 public class MouseBehaviorExtension {
-    
+
     #region Properties
 
 
@@ -23,15 +23,24 @@ public class MouseBehaviorExtension {
         set { _LeaveText = value; }
     }
 
+    private System.Drawing.Color _HoverBorderColor, _LeaveBorderColor;
     [Category("Hover")]
     public System.Drawing.Color HoverBorderColor {
-        get;
-        set;
+        get {
+            return _HoverBorderColor;
+        }
+        set {
+            _HoverBorderColor = value;
+        }
     }
     [Category("Leave")]
     public System.Drawing.Color LeaveBorderColor {
-        get;
-        set;
+        get {
+            return _LeaveBorderColor;
+        }
+        set {
+            _LeaveBorderColor = value;
+        }
     }
 
     private System.Drawing.Color _HoverColor, _LeaveColor;

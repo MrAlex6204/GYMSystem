@@ -78,8 +78,11 @@
     </Compile>
     <Compile Include="Controls\FocusBehaviorExtension.cs" />
     <Compile Include="Controls\MouseBehaviorExtension.cs" />
+    <Compile Include="Controls\PanelPartner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\PanelWindow.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\FrmError.cs">
       <SubType>Form</SubType>
@@ -101,6 +104,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\PanelPartner.resx">
+      <DependentUpon>PanelPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PanelWindow.resx">
+      <DependentUpon>PanelWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmError.resx">
       <DependentUpon>FrmError.cs</DependentUpon>
     </EmbeddedResource>

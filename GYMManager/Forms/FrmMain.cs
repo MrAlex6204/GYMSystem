@@ -22,5 +22,17 @@ using System.Windows.Forms;
         private void animatedButton1_Click(object sender, EventArgs e) {
             MessageBox.Show("Ok");
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void pnlWndAddPartner_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void pnlWndAddPartner_Load(object sender, EventArgs e) {
+
+        }
     }
 
