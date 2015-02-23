@@ -38,10 +38,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 20.25F);
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(209, 9);
+            this.label1.Location = new System.Drawing.Point(253, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 37);
+            this.label1.Size = new System.Drawing.Size(262, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ups! Error Inesperado";
             // 
@@ -57,18 +57,19 @@
             this.txtError.Name = "txtError";
             this.txtError.ReadOnly = true;
             this.txtError.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.txtError.Size = new System.Drawing.Size(655, 219);
+            this.txtError.Size = new System.Drawing.Size(742, 340);
             this.txtError.TabIndex = 1;
             this.txtError.Text = "";
             // 
             // cmdCerrar
             // 
+            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdCerrar.BackColor = System.Drawing.Color.Red;
             this.cmdCerrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.cmdCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCerrar.Font = new System.Drawing.Font("Segoe UI Light", 10F);
             this.cmdCerrar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.cmdCerrar.Location = new System.Drawing.Point(578, 285);
+            this.cmdCerrar.Location = new System.Drawing.Point(665, 406);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(89, 29);
             this.cmdCerrar.TabIndex = 2;
@@ -81,21 +82,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(679, 324);
+            this.ClientSize = new System.Drawing.Size(766, 445);
             this.ControlBox = false;
             this.Controls.Add(this.cmdCerrar);
             this.Controls.Add(this.txtError);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI Light", 11.25F);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmError";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.txtError, 0);
+            this.Controls.SetChildIndex(this.cmdCerrar, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

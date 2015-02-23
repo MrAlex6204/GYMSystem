@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-    public partial class FrmError : Form
+    public partial class FrmError : FrmBase
     {
         public FrmError()
         {
@@ -28,5 +28,15 @@ using System.Windows.Forms;
             wndError.txtError.AppendText(ex.StackTrace + "\n");
             wndError.ShowDialog(); 
        }
+        public static void OledbShowError(System.Data.OleDb.OleDbException ex) {
+            FrmError wndError = new FrmError();
+            wndError.txtError.AppendText("Error Message:\n");
+            wndError.txtError.AppendText(ex.Message + "\n");
+            wndError.txtError.AppendText("Stack Trace:\n");
+            wndError.txtError.AppendText(ex.StackTrace + "\n");
+            wndError.ShowDialog();
+        }
+
+
     }
 

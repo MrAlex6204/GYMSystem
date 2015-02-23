@@ -10,8 +10,7 @@ class AnimatedButton : System.Windows.Forms.Button {
 
     private bool _bFlagIsActive = false;
     private MouseBehaviorExtension _MouseEventBehavior = new MouseBehaviorExtension();
-
-
+    
     public MouseBehaviorExtension MouseBehavior {
         get { return _MouseEventBehavior; }
         set { _MouseEventBehavior = value; }
@@ -34,16 +33,16 @@ class AnimatedButton : System.Windows.Forms.Button {
         if (this.MouseBehavior.HoverImage != null) {
             this.Image = this.MouseBehavior.HoverImage;
         }
-        if (this.MouseBehavior.HoverText != null & this.MouseBehavior.HoverText != "") {
+        if (this.MouseBehavior.HoverText != string.Empty && this.MouseBehavior.HoverText != null) {
             this.Text = this.MouseBehavior.HoverText;
         }
-        if (this.MouseBehavior.HoverForecolor != null) {
+        if (this.MouseBehavior.HoverForecolor != System.Drawing.Color.Empty) {
             this.ForeColor = this.MouseBehavior.HoverForecolor;
         }
-        if (this.MouseBehavior.HoverColor != null) {
+        if (this.MouseBehavior.HoverColor != System.Drawing.Color.Empty) {
             this.BackColor = this.MouseBehavior.HoverColor;
         }
-        if (this.MouseBehavior.HoverBorderColor != null) {
+        if (this.MouseBehavior.HoverBorderColor != System.Drawing.Color.Empty) {
             this.FlatAppearance.BorderColor = this.MouseBehavior.HoverBorderColor;
         }
         _bFlagIsActive = true;
@@ -54,16 +53,16 @@ class AnimatedButton : System.Windows.Forms.Button {
         if (this.MouseBehavior.LeaveImage != null) {
             this.Image = this.MouseBehavior.LeaveImage;
         }
-        if (this.MouseBehavior.LeaveText != null & this.MouseBehavior.LeaveText != "") {
+        if (this.MouseBehavior.LeaveText != string.Empty && this.MouseBehavior.LeaveText != null) {
             this.Text = this.MouseBehavior.LeaveText;
         }
-        if (this.MouseBehavior.LeaveForecolor != null) {
+        if (this.MouseBehavior.LeaveForecolor != System.Drawing.Color.Empty) {
             this.ForeColor = this.MouseBehavior.LeaveForecolor;
         }
-        if (this.MouseBehavior.LeaveColor != null) {
+        if (this.MouseBehavior.LeaveColor != System.Drawing.Color.Empty) {
             this.BackColor = this.MouseBehavior.LeaveColor;
         }
-        if (this.MouseBehavior.LeaveBorderColor != null) {
+        if (this.MouseBehavior.LeaveBorderColor != System.Drawing.Color.Empty) {
             this.FlatAppearance.BorderColor = this.MouseBehavior.LeaveBorderColor;
         }
         _bFlagIsActive = false;
@@ -74,11 +73,11 @@ class AnimatedButton : System.Windows.Forms.Button {
 
     protected override void OnClick(EventArgs e) {
         base.OnClick(e);
-        if (this.SetAsToggleButton) {
+        if (this.SetAsToggleButton) {//===>Check if is as Toogle mode
             if (_bFlagIsActive) {
-                DesactiveButton();
+                DesactiveButton();//===>Set Desaactive color
             } else {
-                ActiveButton();
+                ActiveButton();//===>Set Active color
             }
         }
 

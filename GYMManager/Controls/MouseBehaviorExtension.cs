@@ -11,7 +11,7 @@ public class MouseBehaviorExtension {
     #region Properties
 
 
-    private string _HoverTex = null, _LeaveText = null;
+    private string _HoverTex = string.Empty, _LeaveText = string.Empty;
     [Category("Hover")]
     public string HoverText {
         get { return _HoverTex; }
@@ -23,7 +23,7 @@ public class MouseBehaviorExtension {
         set { _LeaveText = value; }
     }
 
-    private System.Drawing.Color _HoverBorderColor, _LeaveBorderColor;
+    private System.Drawing.Color _HoverBorderColor = System.Drawing.Color.Empty, _LeaveBorderColor = System.Drawing.Color.Empty;
     [Category("Hover")]
     public System.Drawing.Color HoverBorderColor {
         get {
@@ -43,7 +43,7 @@ public class MouseBehaviorExtension {
         }
     }
 
-    private System.Drawing.Color _HoverColor, _LeaveColor;
+    private System.Drawing.Color _HoverColor = System.Drawing.Color.Empty, _LeaveColor = System.Drawing.Color.Empty;
     [Category("Hover")]
     public System.Drawing.Color HoverColor {
         get { return _HoverColor; }
@@ -56,7 +56,7 @@ public class MouseBehaviorExtension {
     }
 
 
-    private System.Drawing.Color _HoverForecolor, _LeaveForecolor;
+    private System.Drawing.Color _HoverForecolor = System.Drawing.Color.Empty, _LeaveForecolor = System.Drawing.Color.Empty;
     [Category("Hover")]
     public System.Drawing.Color HoverForecolor {
         get { return _HoverForecolor; }

@@ -16,7 +16,7 @@ using System.Windows.Forms;
         }
 
         private void cmdAddPartner_Click(object sender, EventArgs e) {
-            this.pnlWndAddPartner.Visible = true;
+            
         }
 
         private void animatedButton1_Click(object sender, EventArgs e) {
@@ -32,6 +32,10 @@ using System.Windows.Forms;
         }
 
         private void pnlWndAddPartner_Load(object sender, EventArgs e) {
+
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e) {
 
         }
     }

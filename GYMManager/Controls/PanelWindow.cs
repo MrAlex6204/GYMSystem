@@ -5,7 +5,7 @@ using System.Text;
 using System.ComponentModel;
 using System.Design;
 
-class PanelWindow : System.Windows.Forms.UserControl {
+class PanelWindow : System.Windows.Forms.Panel {
 
     #region Declarations
     private bool _bFlagShowCloseButton = true;
@@ -79,17 +79,16 @@ class PanelWindow : System.Windows.Forms.UserControl {
         }
     }
 
-    public AnimatedButton OwnerButton {
+    public AnimatedButton MenuButton {
         get {
             return _ButtonOwner;
         }
         set {
-            _ButtonOwner = value;
-            if (value != null) {
-                this.Visible = false;
-
+            _ButtonOwner = value;            
+            this.Visible = this.DesignMode;            
+            if (value != null) {                
                 _ButtonOwner.Click += new EventHandler(_OwnerClick);
-                _ButtonOwner.LostFocus += new EventHandler(_OwnerLost);
+                //_ButtonOwner.LostFocus += new EventHandler(_OwnerLost);
             }
         }
 

@@ -13,7 +13,7 @@ public static class Settings
 
     public static void Load()
     {
-        GYMTitle = Definitions.GetConfigValue("GYM_TITLE");
+        GYMTitle = Utility.GetConfigValue("GYM_TITLE");
     }
     public static void Save()
     {

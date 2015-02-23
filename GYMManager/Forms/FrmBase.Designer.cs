@@ -52,7 +52,7 @@
             this.cmdMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cmdMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdMinimize.Image = ((System.Drawing.Image)(resources.GetObject("cmdMinimize.Image")));
-            this.cmdMinimize.Location = new System.Drawing.Point(923, 15);
+            this.cmdMinimize.Location = new System.Drawing.Point(950, 15);
             mouseBehaviorExtension1.HoverBorderColor = System.Drawing.Color.Empty;
             mouseBehaviorExtension1.HoverColor = System.Drawing.Color.Empty;
             mouseBehaviorExtension1.HoverForecolor = System.Drawing.Color.Empty;
@@ -81,7 +81,7 @@
             this.cmdClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdClose.Image = global::GYMManager.Properties.Resources.close_normal_pic;
-            this.cmdClose.Location = new System.Drawing.Point(946, 8);
+            this.cmdClose.Location = new System.Drawing.Point(973, 8);
             mouseBehaviorExtension2.HoverBorderColor = System.Drawing.Color.Empty;
             mouseBehaviorExtension2.HoverColor = System.Drawing.Color.Empty;
             mouseBehaviorExtension2.HoverForecolor = System.Drawing.Color.Empty;
@@ -115,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(980, 443);
+            this.ClientSize = new System.Drawing.Size(1007, 445);
             this.Controls.Add(this.cmdMinimize);
             this.Controls.Add(this.cmdClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
