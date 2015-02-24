@@ -6,8 +6,8 @@ using System.Windows.Forms;
 
 class PanelPartner : System.Windows.Forms.UserControl {
 
-    private string _PictureFilePath = string.Empty;
-
+    private System.IO.FileInfo _PictureFile = null;
+    
     #region Initilize & Constructor
 
     private System.Windows.Forms.TextBox txtNotas;
@@ -391,11 +391,27 @@ class PanelPartner : System.Windows.Forms.UserControl {
 
     #endregion
 
+    #region Private Function
+    public void Clear() {
+        lnkBrow.Enabled = true;
+        txtNombre.Text = "";
+        txtApellidos.Text = "";
+        txtEdad.Text = "";
+        cmbGenero.SelectedIndex = -1;
+        txtDir.Text = "";
+        txtEmail.Text = "";
+        txtTel.Text = "";
+        txtMovil.Text = "";
+        txtNotas.Text = "";
+        picPartnerPhoto.Image = null;
+        _PictureFile = null;
+    }
     private void cmdOk_Click(object sender, EventArgs e) {
+        
         int Id = 0;
         string GetIdQry = "Select @@Identity";
         string SavePictureQry =
-        "INSERT INTO TBL_FOTOS (CLIENTE_ID,FOTO) VALUES(@ID,@FOTO)";
+        "INSERT INTO TBL_FOTOS (CLIENTE_ID,FOTO,FILE_NAME) VALUES(@ID,@FOTO,@FILE_NAME)";
         string InsertQry =
         " INSERT INTO TBL_SOCIOS " +
         " (NOMBRES,APELLIDOS,TEL,MOVIL,SEXO,DOMICILIO,EMAIL,EDAD,NOTAS)" +
@@ -415,10 +431,11 @@ class PanelPartner : System.Windows.Forms.UserControl {
         if (Utility.Db.SqlExec(InsertQry) > 0) {
             Id = (int)Utility.Db.SqlExecScalar(GetIdQry);
 
-            if (_PictureFilePath != string.Empty) {
+            if (_PictureFile != null) {
                 Utility.Db.ClearSqlVars();
                 Utility.Db.AddSqlVar("@ID", Id);
-                Utility.Db.AddSqlVar("@FOTO", Utility.GetPictureStream(_PictureFilePath));
+                Utility.Db.AddSqlVar("@FILE_NAME", _PictureFile.Name);
+                Utility.Db.AddSqlVar("@FOTO", Utility.GetPictureStream(_PictureFile.FullName));
 
                 if (Utility.Db.SqlExec(SavePictureQry) > 0) {
                     MessageBox.Show("El socio a sido regitrado satisfactoriamente\nCon el numero "+Id.ToString(),"Listo!");
@@ -432,7 +449,6 @@ class PanelPartner : System.Windows.Forms.UserControl {
 
 
     }
-
     private void lnkBrow_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e) {
         System.Windows.Forms.OpenFileDialog dlgOpenFile = new System.Windows.Forms.OpenFileDialog();
 
@@ -443,14 +459,16 @@ class PanelPartner : System.Windows.Forms.UserControl {
 
         if (dlgOpenFile.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
             picPartnerPhoto.Image = System.Drawing.Image.FromFile(dlgOpenFile.FileName);
-            _PictureFilePath = dlgOpenFile.FileName;
+            _PictureFile = new System.IO.FileInfo( dlgOpenFile.FileName);
         }
 
     }
-
     private void cmdCancel_Click(object sender, EventArgs e) {
         this.Visible = false;
     }
+
+    #endregion
+
 
 
 
