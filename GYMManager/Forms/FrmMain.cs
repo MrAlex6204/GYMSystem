@@ -16,7 +16,8 @@ using System.Windows.Forms;
         }
 
         private void cmdAddPartner_Click(object sender, EventArgs e) {
-            
+            pnlWndSocios.Desactive();
+            pnlAddPartner.Show();
         }
 
         private void animatedButton1_Click(object sender, EventArgs e) {

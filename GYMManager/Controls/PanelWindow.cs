@@ -11,6 +11,7 @@ class PanelWindow : System.Windows.Forms.Panel {
     private bool _bFlagShowCloseButton = true;
     private AnimatedButton _ButtonOwner;
     private AnimatedButton _cmdClosePanel;
+    private static List<AnimatedButton> _RegisteredButtons = new List<AnimatedButton>();
 
     MouseBehaviorExtension mouseBehaviorExtension1 = new MouseBehaviorExtension();
     #endregion
@@ -21,7 +22,7 @@ class PanelWindow : System.Windows.Forms.Panel {
         this.InitializeComponent();
         if (this.DesignMode) {
             this.Visible = false;
-        }        
+        }
     }
 
     public void InitializeComponent() {
@@ -70,6 +71,10 @@ class PanelWindow : System.Windows.Forms.Panel {
 
     #region Properties
 
+    public bool SetAsMenuGroup {
+        get;
+        set;
+    }
     public bool ShowCloseButton {
         get {
             return _bFlagShowCloseButton;
@@ -79,6 +84,9 @@ class PanelWindow : System.Windows.Forms.Panel {
         }
     }
 
+    enum Type {
+        File, Folder
+    }
     public AnimatedButton MenuButton {
         get {
             return _ButtonOwner;
@@ -89,11 +97,32 @@ class PanelWindow : System.Windows.Forms.Panel {
             if (value != null) {
                 _ButtonOwner.Click += new EventHandler(_OwnerClick);
                 //_ButtonOwner.LostFocus += new EventHandler(_OwnerLost);
+                if (this.SetAsMenuGroup) {
+                    _RegisteredButtons.Add(value);
+                }
+
             }
         }
 
     }
 
+    #endregion
+
+    #region Public Function
+    public void Active() {
+        this.Visible = true;
+        if (this.SetAsMenuGroup) {
+            //===>Desactive all buttons from the list
+            foreach (AnimatedButton iButton in PanelWindow._RegisteredButtons) {
+                iButton.DesactiveButton();
+            }
+        }
+        _ButtonOwner.ActiveButton();
+    }
+    public void Desactive() {
+        this.Visible = false;
+        _ButtonOwner.DesactiveButton();
+    }
     #endregion
 
     #region Private Function
@@ -103,6 +132,7 @@ class PanelWindow : System.Windows.Forms.Panel {
         if (!this.DesignMode) {
             this.Visible = !this.Visible;
         }
+
 
     }
 

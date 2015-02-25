@@ -47,6 +47,7 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblGYMTitle = new System.Windows.Forms.Label();
             this.pnlAddPartner = new PanelPartner();
+            this.panelWindow1 = new PanelWindow();
             this.pnlWndSocios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -249,6 +250,7 @@
             this.pnlWndSocios.Location = new System.Drawing.Point(167, 1);
             this.pnlWndSocios.MenuButton = this.cmdSocios;
             this.pnlWndSocios.Name = "pnlWndSocios";
+            this.pnlWndSocios.SetAsMenuGroup = false;
             this.pnlWndSocios.ShowCloseButton = false;
             this.pnlWndSocios.Size = new System.Drawing.Size(214, 443);
             this.pnlWndSocios.TabIndex = 14;
@@ -340,11 +342,23 @@
             this.pnlAddPartner.Name = "pnlAddPartner";
             this.pnlAddPartner.Size = new System.Drawing.Size(821, 375);
             this.pnlAddPartner.TabIndex = 17;
+            this.pnlAddPartner.Visible = false;
+            // 
+            // panelWindow1
+            // 
+            this.panelWindow1.Location = new System.Drawing.Point(167, 4);
+            this.panelWindow1.MenuButton = this.cmdHome;
+            this.panelWindow1.Name = "panelWindow1";
+            this.panelWindow1.SetAsMenuGroup = false;
+            this.panelWindow1.ShowCloseButton = true;
+            this.panelWindow1.Size = new System.Drawing.Size(419, 100);
+            this.panelWindow1.TabIndex = 12;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1007, 445);
+            this.Controls.Add(this.panelWindow1);
             this.Controls.Add(this.pnlWndSocios);
             this.Controls.Add(this.lblGYMTitle);
             this.Controls.Add(this.picLogo);
@@ -369,6 +383,7 @@
             this.Controls.SetChildIndex(this.picLogo, 0);
             this.Controls.SetChildIndex(this.lblGYMTitle, 0);
             this.Controls.SetChildIndex(this.pnlWndSocios, 0);
+            this.Controls.SetChildIndex(this.panelWindow1, 0);
             this.pnlWndSocios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
@@ -390,4 +405,5 @@
         private AnimatedButton cmdAddPartner;
         private AnimatedButton animatedButton1;
         private PanelPartner pnlAddPartner;
+        private PanelWindow panelWindow1;
     }

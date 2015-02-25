@@ -10,7 +10,7 @@ class AnimatedButton : System.Windows.Forms.Button {
 
     private bool _bFlagIsActive = false;
     private MouseBehaviorExtension _MouseEventBehavior = new MouseBehaviorExtension();
-    
+
     public MouseBehaviorExtension MouseBehavior {
         get { return _MouseEventBehavior; }
         set { _MouseEventBehavior = value; }
@@ -28,6 +28,11 @@ class AnimatedButton : System.Windows.Forms.Button {
 
         return "Button";
     }
+
+    public bool IsActive {
+        get { return _bFlagIsActive; }
+    }
+
 
     public void ActiveButton() {//Set button active button design
         if (this.MouseBehavior.HoverImage != null) {
