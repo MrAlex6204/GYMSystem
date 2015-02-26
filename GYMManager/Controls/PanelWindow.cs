@@ -130,7 +130,20 @@ class PanelWindow : System.Windows.Forms.Panel {
     private void _OwnerClick(object sender, object e) {
 
         if (!this.DesignMode) {
-            this.Visible = !this.Visible;
+            if (this.SetAsMenuGroup) {
+                if (_ButtonOwner != null) {
+                    if (_ButtonOwner.IsActive) {
+                        this.Desactive();
+                    } else {
+                        this.Active();
+                    }
+                } else {
+                    this.Visible = !this.Visible;
+                }
+            } else {
+                this.Visible = !this.Visible;
+            }
+
         }
 
 
