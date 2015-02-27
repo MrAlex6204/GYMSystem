@@ -11,6 +11,8 @@ class AnimatedButton : System.Windows.Forms.Button {
     private bool _bFlagIsActive = false;
     private MouseBehaviorExtension _MouseEventBehavior = new MouseBehaviorExtension();
 
+    public delegate void StateChangeHandler(object sender, object e);
+    public StateChangeHandler StateChange;
     public MouseBehaviorExtension MouseBehavior {
         get { return _MouseEventBehavior; }
         set { _MouseEventBehavior = value; }
@@ -32,8 +34,7 @@ class AnimatedButton : System.Windows.Forms.Button {
     public bool IsActive {
         get { return _bFlagIsActive; }
     }
-
-
+    
     public void ActiveButton() {//Set button active button design
         if (this.MouseBehavior.HoverImage != null) {
             this.Image = this.MouseBehavior.HoverImage;
@@ -51,6 +52,9 @@ class AnimatedButton : System.Windows.Forms.Button {
             this.FlatAppearance.BorderColor = this.MouseBehavior.HoverBorderColor;
         }
         _bFlagIsActive = true;
+        if (StateChange != null) {
+            StateChange(this, _bFlagIsActive);
+        }
         this.Refresh();
     }
 
@@ -71,6 +75,9 @@ class AnimatedButton : System.Windows.Forms.Button {
             this.FlatAppearance.BorderColor = this.MouseBehavior.LeaveBorderColor;
         }
         _bFlagIsActive = false;
+        if (StateChange != null) {
+            StateChange(this, _bFlagIsActive);
+        }
         this.Refresh();
     }
 
