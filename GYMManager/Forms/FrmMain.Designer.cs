@@ -326,6 +326,7 @@
             // 
             // lblGYMTitle
             // 
+            this.lblGYMTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20F);
             this.lblGYMTitle.Location = new System.Drawing.Point(281, 5);
             this.lblGYMTitle.Name = "lblGYMTitle";
@@ -345,11 +346,11 @@
             // 
             // panelWindow1
             // 
-            this.panelWindow1.Location = new System.Drawing.Point(167, 4);
+            this.panelWindow1.Location = new System.Drawing.Point(167, 0);
             this.panelWindow1.MenuButton = this.cmdHome;
             this.panelWindow1.Name = "panelWindow1";
             this.panelWindow1.ShowCloseButton = true;
-            this.panelWindow1.Size = new System.Drawing.Size(419, 100);
+            this.panelWindow1.Size = new System.Drawing.Size(829, 433);
             this.panelWindow1.TabIndex = 12;
             // 
             // FrmMain

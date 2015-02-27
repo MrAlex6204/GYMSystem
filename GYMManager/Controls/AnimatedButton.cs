@@ -95,7 +95,6 @@ class AnimatedButton : System.Windows.Forms.Button {
             }
         }
 
-
     }
 
     protected override void OnMouseLeave(EventArgs e) {
