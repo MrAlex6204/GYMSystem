@@ -11,7 +11,7 @@ class PanelWindow : System.Windows.Forms.Panel {
     private bool _bFlagShowCloseButton = true;
     private AnimatedButton _ButtonOwner;
     private AnimatedButton _cmdClosePanel;
-  
+    private static List<AnimatedButton> _RegisteredButtons = new List<AnimatedButton>();
 
     MouseBehaviorExtension mouseBehaviorExtension1 = new MouseBehaviorExtension();
     #endregion
@@ -91,7 +91,8 @@ class PanelWindow : System.Windows.Forms.Panel {
             _ButtonOwner = value;
             this.Visible = this.DesignMode; //===>Set visible the panel when is in a design mode
             if (value != null) {
-                _ButtonOwner.StateChange += new AnimatedButton.StateChangeHandler (_OwnerStateChangeEvent);              
+                _ButtonOwner.StateChange += new AnimatedButton.StateChangeHandler(_OwnerStateChangeEvent);
+                _RegisteredButtons.Add(_ButtonOwner);
 
             }
         }
@@ -108,18 +109,23 @@ class PanelWindow : System.Windows.Forms.Panel {
     #region Private Function
 
     private void _OwnerStateChangeEvent(object sender, object e) {
- //===>Owner button has change state
+        //===>Owner button has change state
         if (!this.DesignMode) {
-
             if ((bool)e) {
-               
+                foreach (AnimatedButton iButton in _RegisteredButtons) {
+                    iButton.DesactiveButton();//===>Hide all opened
+                }
+                ((AnimatedButton)sender).ActiveButton(false);
                 this.Visible = true;
             } else {
                 this.Visible = false;
             }
-
+        } else {
+            this.Visible = false;
         }
+
     }
+
 
     private void _OwnerLost(object sender, object e) {
         ((AnimatedButton)sender).DesactiveButton();

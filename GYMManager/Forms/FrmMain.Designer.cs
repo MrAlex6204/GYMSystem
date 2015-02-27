@@ -250,7 +250,6 @@
             this.pnlWndSocios.Location = new System.Drawing.Point(167, 1);
             this.pnlWndSocios.MenuButton = this.cmdSocios;
             this.pnlWndSocios.Name = "pnlWndSocios";
-       
             this.pnlWndSocios.ShowCloseButton = false;
             this.pnlWndSocios.Size = new System.Drawing.Size(214, 443);
             this.pnlWndSocios.TabIndex = 14;
@@ -349,7 +348,6 @@
             this.panelWindow1.Location = new System.Drawing.Point(167, 4);
             this.panelWindow1.MenuButton = this.cmdHome;
             this.panelWindow1.Name = "panelWindow1";
-           
             this.panelWindow1.ShowCloseButton = true;
             this.panelWindow1.Size = new System.Drawing.Size(419, 100);
             this.panelWindow1.TabIndex = 12;
@@ -357,6 +355,7 @@
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.BackgroundImage = global::GYMManager.Properties.Resources.gorillaz_on_abbey_road_by_eddieholly_d50dbc9;
             this.ClientSize = new System.Drawing.Size(1007, 445);
             this.Controls.Add(this.panelWindow1);
             this.Controls.Add(this.pnlWndSocios);

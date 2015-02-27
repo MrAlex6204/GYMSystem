@@ -154,6 +154,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\GYM_LOGO.png" />
+    <None Include="Resources\gorillaz_on_abbey_road_by_eddieholly-d50dbc9.jpg" />
     <Content Include="TargetDesign\ButtonDesign.png" />
     <Content Include="TargetDesign\LstDesign.png" />
     <Content Include="TargetDesign\LstDesign2.png" />
