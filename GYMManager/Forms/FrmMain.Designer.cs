@@ -34,6 +34,10 @@
             MouseBehaviorExtension mouseBehaviorExtension6 = new MouseBehaviorExtension();
             MouseBehaviorExtension mouseBehaviorExtension7 = new MouseBehaviorExtension();
             MouseBehaviorExtension mouseBehaviorExtension8 = new MouseBehaviorExtension();
+            MouseBehaviorExtension mouseBehaviorExtension9 = new MouseBehaviorExtension();
+            SocioInfo socioInfo1 = new SocioInfo();
+            SocioInfo.ImgInfo imgInfo1 = new SocioInfo.ImgInfo();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.animatedButton6 = new AnimatedButton();
             this.animatedButton5 = new AnimatedButton();
             this.animatedButton4 = new AnimatedButton();
@@ -42,14 +46,12 @@
             this.cmdHome = new AnimatedButton();
             this.focusBehaviorExtension1 = new FocusBehaviorExtension();
             this.pnlWndSocios = new PanelWindow();
-            this.animatedButton1 = new AnimatedButton();
+            this.cmdLstPartners = new AnimatedButton();
+            this.cmdSearchPartner = new AnimatedButton();
             this.cmdAddPartner = new AnimatedButton();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblGYMTitle = new System.Windows.Forms.Label();
             this.pnlAddPartner = new PanelPartner();
-            this.panelWindow1 = new PanelWindow();
             this.pnlWndSocios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // animatedButton6
@@ -245,25 +247,26 @@
             // pnlWndSocios
             // 
             this.pnlWndSocios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.pnlWndSocios.Controls.Add(this.animatedButton1);
+            this.pnlWndSocios.Controls.Add(this.cmdLstPartners);
+            this.pnlWndSocios.Controls.Add(this.cmdSearchPartner);
             this.pnlWndSocios.Controls.Add(this.cmdAddPartner);
-            this.pnlWndSocios.Location = new System.Drawing.Point(167, 1);
+            this.pnlWndSocios.Location = new System.Drawing.Point(166, 1);
             this.pnlWndSocios.MenuButton = this.cmdSocios;
             this.pnlWndSocios.Name = "pnlWndSocios";
             this.pnlWndSocios.ShowCloseButton = false;
-            this.pnlWndSocios.Size = new System.Drawing.Size(214, 443);
+            this.pnlWndSocios.Size = new System.Drawing.Size(217, 443);
             this.pnlWndSocios.TabIndex = 14;
             // 
-            // animatedButton1
+            // cmdLstPartners
             // 
-            this.animatedButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.animatedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.animatedButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.animatedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.animatedButton1.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.animatedButton1.ForeColor = System.Drawing.Color.DimGray;
-            this.animatedButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton1.Location = new System.Drawing.Point(-5, 43);
+            this.cmdLstPartners.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdLstPartners.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cmdLstPartners.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cmdLstPartners.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLstPartners.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.cmdLstPartners.ForeColor = System.Drawing.Color.DimGray;
+            this.cmdLstPartners.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdLstPartners.Location = new System.Drawing.Point(-5, 79);
             mouseBehaviorExtension7.HoverBorderColor = System.Drawing.Color.DimGray;
             mouseBehaviorExtension7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension7.HoverForecolor = System.Drawing.Color.Goldenrod;
@@ -274,15 +277,43 @@
             mouseBehaviorExtension7.LeaveForecolor = System.Drawing.Color.DimGray;
             mouseBehaviorExtension7.LeaveImage = null;
             mouseBehaviorExtension7.LeaveText = null;
-            this.animatedButton1.MouseBehavior = mouseBehaviorExtension7;
-            this.animatedButton1.Name = "animatedButton1";
-            this.animatedButton1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.animatedButton1.SetAsToggleButton = false;
-            this.animatedButton1.Size = new System.Drawing.Size(221, 29);
-            this.animatedButton1.TabIndex = 11;
-            this.animatedButton1.Text = "BUSCAR";
-            this.animatedButton1.UseVisualStyleBackColor = false;
-            this.animatedButton1.Click += new System.EventHandler(this.animatedButton1_Click);
+            this.cmdLstPartners.MouseBehavior = mouseBehaviorExtension7;
+            this.cmdLstPartners.Name = "cmdLstPartners";
+            this.cmdLstPartners.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.cmdLstPartners.SetAsToggleButton = false;
+            this.cmdLstPartners.Size = new System.Drawing.Size(224, 29);
+            this.cmdLstPartners.TabIndex = 12;
+            this.cmdLstPartners.Text = "SOCIOS";
+            this.cmdLstPartners.UseVisualStyleBackColor = false;
+            // 
+            // cmdSearchPartner
+            // 
+            this.cmdSearchPartner.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdSearchPartner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cmdSearchPartner.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cmdSearchPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSearchPartner.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.cmdSearchPartner.ForeColor = System.Drawing.Color.DimGray;
+            this.cmdSearchPartner.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdSearchPartner.Location = new System.Drawing.Point(-5, 43);
+            mouseBehaviorExtension8.HoverBorderColor = System.Drawing.Color.DimGray;
+            mouseBehaviorExtension8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            mouseBehaviorExtension8.HoverForecolor = System.Drawing.Color.Goldenrod;
+            mouseBehaviorExtension8.HoverImage = null;
+            mouseBehaviorExtension8.HoverText = null;
+            mouseBehaviorExtension8.LeaveBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            mouseBehaviorExtension8.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            mouseBehaviorExtension8.LeaveForecolor = System.Drawing.Color.DimGray;
+            mouseBehaviorExtension8.LeaveImage = null;
+            mouseBehaviorExtension8.LeaveText = null;
+            this.cmdSearchPartner.MouseBehavior = mouseBehaviorExtension8;
+            this.cmdSearchPartner.Name = "cmdSearchPartner";
+            this.cmdSearchPartner.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.cmdSearchPartner.SetAsToggleButton = false;
+            this.cmdSearchPartner.Size = new System.Drawing.Size(224, 29);
+            this.cmdSearchPartner.TabIndex = 11;
+            this.cmdSearchPartner.Text = "BUSCAR";
+            this.cmdSearchPartner.UseVisualStyleBackColor = false;
             // 
             // cmdAddPartner
             // 
@@ -294,74 +325,66 @@
             this.cmdAddPartner.ForeColor = System.Drawing.Color.DimGray;
             this.cmdAddPartner.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdAddPartner.Location = new System.Drawing.Point(-5, 6);
-            mouseBehaviorExtension8.HoverBorderColor = System.Drawing.Color.DimGray;
-            mouseBehaviorExtension8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            mouseBehaviorExtension8.HoverForecolor = System.Drawing.Color.Goldenrod;
-            mouseBehaviorExtension8.HoverImage = null;
-            mouseBehaviorExtension8.HoverText = null;
-            mouseBehaviorExtension8.LeaveBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            mouseBehaviorExtension8.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            mouseBehaviorExtension8.LeaveForecolor = System.Drawing.Color.DimGray;
-            mouseBehaviorExtension8.LeaveImage = null;
-            mouseBehaviorExtension8.LeaveText = null;
-            this.cmdAddPartner.MouseBehavior = mouseBehaviorExtension8;
+            mouseBehaviorExtension9.HoverBorderColor = System.Drawing.Color.DimGray;
+            mouseBehaviorExtension9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            mouseBehaviorExtension9.HoverForecolor = System.Drawing.Color.Goldenrod;
+            mouseBehaviorExtension9.HoverImage = null;
+            mouseBehaviorExtension9.HoverText = null;
+            mouseBehaviorExtension9.LeaveBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            mouseBehaviorExtension9.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            mouseBehaviorExtension9.LeaveForecolor = System.Drawing.Color.DimGray;
+            mouseBehaviorExtension9.LeaveImage = null;
+            mouseBehaviorExtension9.LeaveText = null;
+            this.cmdAddPartner.MouseBehavior = mouseBehaviorExtension9;
             this.cmdAddPartner.Name = "cmdAddPartner";
             this.cmdAddPartner.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.cmdAddPartner.SetAsToggleButton = false;
-            this.cmdAddPartner.Size = new System.Drawing.Size(221, 29);
+            this.cmdAddPartner.Size = new System.Drawing.Size(224, 29);
             this.cmdAddPartner.TabIndex = 10;
             this.cmdAddPartner.Text = "CREAR CUENTA";
             this.cmdAddPartner.UseVisualStyleBackColor = false;
             this.cmdAddPartner.Click += new System.EventHandler(this.cmdAddPartner_Click);
             // 
-            // picLogo
-            // 
-            this.picLogo.Image = global::GYMManager.Properties.Resources.GYM_LOGO;
-            this.picLogo.Location = new System.Drawing.Point(175, 7);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(100, 50);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogo.TabIndex = 15;
-            this.picLogo.TabStop = false;
-            // 
             // lblGYMTitle
             // 
             this.lblGYMTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20F);
-            this.lblGYMTitle.Location = new System.Drawing.Point(281, 5);
+            this.lblGYMTitle.Location = new System.Drawing.Point(175, 5);
             this.lblGYMTitle.Name = "lblGYMTitle";
-            this.lblGYMTitle.Size = new System.Drawing.Size(636, 50);
+            this.lblGYMTitle.Size = new System.Drawing.Size(742, 50);
             this.lblGYMTitle.TabIndex = 16;
             this.lblGYMTitle.Text = "[GYM TITLE]";
             this.lblGYMTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlAddPartner
             // 
-            this.pnlAddPartner.BackColor = System.Drawing.Color.White;
-            this.pnlAddPartner.Location = new System.Drawing.Point(175, 58);
+            this.pnlAddPartner.ActionType = PanelPartner.RecordModeAction.NewRecord;
+            this.pnlAddPartner.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlAddPartner.Location = new System.Drawing.Point(179, 35);
             this.pnlAddPartner.Name = "pnlAddPartner";
-            this.pnlAddPartner.Size = new System.Drawing.Size(821, 375);
+            this.pnlAddPartner.Size = new System.Drawing.Size(819, 401);
+            socioInfo1.Apellidos = null;
+            socioInfo1.Domicilio = null;
+            socioInfo1.Edad = null;
+            socioInfo1.Email = null;
+            socioInfo1.Id = null;
+            socioInfo1.Movil = null;
+            socioInfo1.Nombres = null;
+            socioInfo1.Notas = null;
+            socioInfo1.Sexo = null;
+            socioInfo1.SocioImg = imgInfo1;
+            socioInfo1.Tel = null;
+            this.pnlAddPartner.SocioInfo = socioInfo1;
             this.pnlAddPartner.TabIndex = 17;
             this.pnlAddPartner.Visible = false;
-            // 
-            // panelWindow1
-            // 
-            this.panelWindow1.Location = new System.Drawing.Point(167, 0);
-            this.panelWindow1.MenuButton = this.cmdHome;
-            this.panelWindow1.Name = "panelWindow1";
-            this.panelWindow1.ShowCloseButton = true;
-            this.panelWindow1.Size = new System.Drawing.Size(829, 433);
-            this.panelWindow1.TabIndex = 12;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.BackgroundImage = global::GYMManager.Properties.Resources.gorillaz_on_abbey_road_by_eddieholly_d50dbc9;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 445);
-            this.Controls.Add(this.panelWindow1);
             this.Controls.Add(this.pnlWndSocios);
-            this.Controls.Add(this.lblGYMTitle);
-            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.animatedButton6);
             this.Controls.Add(this.animatedButton5);
             this.Controls.Add(this.animatedButton4);
@@ -369,10 +392,12 @@
             this.Controls.Add(this.cmdSocios);
             this.Controls.Add(this.cmdHome);
             this.Controls.Add(this.pnlAddPartner);
+            this.Controls.Add(this.lblGYMTitle);
             this.MinimizeBox = false;
             this.Name = "FrmMain";
             this.Text = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.Controls.SetChildIndex(this.lblGYMTitle, 0);
             this.Controls.SetChildIndex(this.pnlAddPartner, 0);
             this.Controls.SetChildIndex(this.cmdHome, 0);
             this.Controls.SetChildIndex(this.cmdSocios, 0);
@@ -380,12 +405,8 @@
             this.Controls.SetChildIndex(this.animatedButton4, 0);
             this.Controls.SetChildIndex(this.animatedButton5, 0);
             this.Controls.SetChildIndex(this.animatedButton6, 0);
-            this.Controls.SetChildIndex(this.picLogo, 0);
-            this.Controls.SetChildIndex(this.lblGYMTitle, 0);
             this.Controls.SetChildIndex(this.pnlWndSocios, 0);
-            this.Controls.SetChildIndex(this.panelWindow1, 0);
             this.pnlWndSocios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,10 +421,9 @@
         private AnimatedButton cmdHome;
         private FocusBehaviorExtension focusBehaviorExtension1;
         private PanelWindow pnlWndSocios;
-        private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblGYMTitle;
         private AnimatedButton cmdAddPartner;
-        private AnimatedButton animatedButton1;
+        private AnimatedButton cmdSearchPartner;
         private PanelPartner pnlAddPartner;
-        private PanelWindow panelWindow1;
+        private AnimatedButton cmdLstPartners;
     }

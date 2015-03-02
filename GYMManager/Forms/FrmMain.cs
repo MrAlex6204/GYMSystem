@@ -16,28 +16,13 @@ using System.Windows.Forms;
         }
 
         private void cmdAddPartner_Click(object sender, EventArgs e) {
-          
+            cmdSocios.DesactiveButton();
             pnlAddPartner.Show();
         }
 
-        private void animatedButton1_Click(object sender, EventArgs e) {
-            MessageBox.Show("Ok");
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e) {
-
-        }
-
-        private void pnlWndAddPartner_Paint(object sender, PaintEventArgs e) {
-
-        }
-
-        private void pnlWndAddPartner_Load(object sender, EventArgs e) {
-
-        }
-
         private void FrmMain_Load(object sender, EventArgs e) {
-
+            this.AddKeyPressEventHandler(this);
         }
+
     }
 

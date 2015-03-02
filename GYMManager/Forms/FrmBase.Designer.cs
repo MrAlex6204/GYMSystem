@@ -48,6 +48,7 @@
             this.cmdMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdMinimize.BackColor = System.Drawing.Color.Transparent;
             this.cmdMinimize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
+            this.cmdMinimize.FlatAppearance.BorderSize = 0;
             this.cmdMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.cmdMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.cmdMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

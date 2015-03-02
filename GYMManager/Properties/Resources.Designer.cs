@@ -93,9 +93,9 @@ namespace GYMManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gorillaz_on_abbey_road_by_eddieholly_d50dbc9 {
+        internal static System.Drawing.Bitmap GYM_LOGO {
             get {
-                object obj = ResourceManager.GetObject("gorillaz_on_abbey_road_by_eddieholly-d50dbc9", resourceCulture);
+                object obj = ResourceManager.GetObject("GYM_LOGO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace GYMManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap GYM_LOGO {
+        internal static System.Drawing.Bitmap GYMDefaultWallPaper {
             get {
-                object obj = ResourceManager.GetObject("GYM_LOGO", resourceCulture);
+                object obj = ResourceManager.GetObject("GYMDefaultWallPaper", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -11,12 +11,11 @@ using Data.SQLTransac;
 public partial class FrmBase : Form {
     private bool _bFlagMouseDown = false;
     private int offSetX = 0, OffSetY = 0;
-
-
-
+    
     public FrmBase() {
         InitializeComponent();
         cmdMinimize.Visible = this.MinimizeBox;
+        AddKeyPressEventHandler(this);
     }
 
     private void _DrawBorders() {
@@ -29,16 +28,40 @@ public partial class FrmBase : Form {
         Pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
         Graphic.DrawRectangle(Pen, Rectangle);
     }
-
-    protected override void OnPaint(PaintEventArgs e) {
-        using (Pen brder = new Pen(Color.Blue)) {
-            using (System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(Color.FromArgb(128, System.Drawing.Color.Black))) {
-                e.Graphics.FillRectangle(myBrush, new Rectangle(200, 0, 200, 300));
-                e.Graphics.DrawLine(brder, 150, 50, 200, 50);
-                myBrush.Color = Color.BlueViolet;//' change brush color
-                e.Graphics.FillEllipse(myBrush, 40, 90, 86, 30);
+    
+    public void AddKeyPressEventHandler(System.Windows.Forms.Control OwnerControl) {
+        if (OwnerControl.Controls.Count > 0) {
+            foreach (Control iControl in OwnerControl.Controls) {
+                AddKeyPressEventHandler(iControl);
             }
+        } else {
+            if ((OwnerControl is TextBox || OwnerControl is TextBoxAnimate) && !((TextBox)OwnerControl).Multiline) {
+                OwnerControl.KeyPress += new KeyPressEventHandler(_KeyPress);
+            }
+            System.Diagnostics.Debug.Print(OwnerControl.Name);
+        }    
+    }
+    
+    protected override void OnLoad(EventArgs e) {
+        AddKeyPressEventHandler(this);
+    }
+
+    private void _KeyPress(object sender, KeyPressEventArgs e) {
+        if (e.KeyChar == (char)13) {
+            System.Windows.Forms.SendKeys.Send("{TAB}");
         }
+    }
+
+    #region Form Events
+    protected override void OnPaint(PaintEventArgs e) {
+        //using (Pen brder = new Pen(Color.Blue)) {
+        //    using (System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(Color.FromArgb(128, System.Drawing.Color.Black))) {
+        //        e.Graphics.FillRectangle(myBrush, new Rectangle(200, 0, 200, 300));
+        //        e.Graphics.DrawLine(brder, 150, 50, 200, 50);
+        //        myBrush.Color = Color.BlueViolet;//' change brush color
+        //        e.Graphics.FillEllipse(myBrush, 40, 90, 86, 30);
+        //    }
+        //}
         _DrawBorders();
     }
 
@@ -73,13 +96,5 @@ public partial class FrmBase : Form {
     private void cmdClose_Click(object sender, EventArgs e) {
         this.Close();
     }
-
-    private void animatedButton2_Click(object sender, EventArgs e) {
-
-    }
-
-    private void cmdHome_Click(object sender, EventArgs e) {
-
-    }
-
+    #endregion
 }

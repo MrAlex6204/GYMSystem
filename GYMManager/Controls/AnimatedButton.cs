@@ -13,6 +13,7 @@ class AnimatedButton : System.Windows.Forms.Button {
 
     public delegate void StateChangeHandler(object sender, object e);
     public StateChangeHandler StateChange;
+
     public MouseBehaviorExtension MouseBehavior {
         get { return _MouseEventBehavior; }
         set { _MouseEventBehavior = value; }

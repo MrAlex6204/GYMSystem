@@ -43,6 +43,8 @@ public class MouseBehaviorExtension {
         }
     }
 
+  
+
     private System.Drawing.Color _HoverColor = System.Drawing.Color.Empty, _LeaveColor = System.Drawing.Color.Empty;
     [Category("Hover")]
     public System.Drawing.Color HoverColor {
