@@ -37,7 +37,6 @@
             MouseBehaviorExtension mouseBehaviorExtension9 = new MouseBehaviorExtension();
             SocioInfo socioInfo1 = new SocioInfo();
             SocioInfo.ImgInfo imgInfo1 = new SocioInfo.ImgInfo();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.animatedButton6 = new AnimatedButton();
             this.animatedButton5 = new AnimatedButton();
             this.animatedButton4 = new AnimatedButton();
@@ -354,7 +353,7 @@
             // 
             this.lblGYMTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20F);
-            this.lblGYMTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblGYMTitle.ForeColor = System.Drawing.Color.Maroon;
             this.lblGYMTitle.Location = new System.Drawing.Point(175, 5);
             this.lblGYMTitle.Name = "lblGYMTitle";
             this.lblGYMTitle.Size = new System.Drawing.Size(742, 50);
@@ -425,7 +424,7 @@
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::GYMManager.Properties.Resources.WallPaper2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 445);
             this.Controls.Add(this.pnlSocios);
