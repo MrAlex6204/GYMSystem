@@ -85,11 +85,11 @@
     <Compile Include="Controls\PanelWindow.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\SocioItemInfo.cs">
+    <Compile Include="Controls\ItemInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\SocioItemInfo.Designer.cs">
-      <DependentUpon>SocioItemInfo.cs</DependentUpon>
+    <Compile Include="Controls\ItemInfo.Designer.cs">
+      <DependentUpon>ItemInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\TextBoxAnimated.cs">
       <SubType>Component</SubType>
@@ -120,8 +120,8 @@
     <EmbeddedResource Include="Controls\PanelWindow.resx">
       <DependentUpon>PanelWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\SocioItemInfo.resx">
-      <DependentUpon>SocioItemInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ItemInfo.resx">
+      <DependentUpon>ItemInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmError.resx">
       <DependentUpon>FrmError.cs</DependentUpon>
@@ -170,6 +170,8 @@
     <None Include="Resources\gorillaz_on_abbey_road_by_eddieholly-d50dbc9.jpg" />
     <None Include="Resources\GYMDefaultWallPaper.jpg" />
     <None Include="Resources\GYMDefaultWallPaper1.jpg" />
+    <None Include="Resources\vertical_menu_icon_normal.png" />
+    <None Include="Resources\vertical_menu_icon_hover.png" />
     <Content Include="TargetDesign\ButtonDesign.png" />
     <Content Include="TargetDesign\LstDesign.png" />
     <Content Include="TargetDesign\LstDesign2.png" />

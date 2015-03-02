@@ -12,7 +12,9 @@ using System.Windows.Forms;
         public FrmMain()
         {
             InitializeComponent();
-            lblGYMTitle.Text = Settings.GYMTitle;
+            lblGYMTitle.Text = Settings.GYMTitle;            
+            this.RegisterMouseMoveEvent(this.pnlAddPartner);
+            this.RegisterMouseMoveEvent(this.pnlSocios);
         }
 
         private void cmdAddPartner_Click(object sender, EventArgs e) {
@@ -22,6 +24,22 @@ using System.Windows.Forms;
 
         private void FrmMain_Load(object sender, EventArgs e) {
             this.AddKeyPressEventHandler(this);
+        }
+
+        private void cmdLstPartners_Click(object sender, EventArgs e) {
+            cmdSocios.DesactiveButton();
+            pnlSocios.Visible = true;
+            List<SocioInfo> LstSocios = new List<SocioInfo>();
+
+            LstSocios = SocioInfo.GetSocios();
+            flwSocios.Controls.Clear();
+            foreach (SocioInfo iSocio in LstSocios) {
+                ItemInfo item = new ItemInfo(iSocio);
+                flwSocios.Controls.Add(item);
+            }
+
+
+            
         }
 
     }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 
-class SocioInfo {
+public  class SocioInfo {
 
     #region Class Constructor
 
@@ -141,12 +141,31 @@ class SocioInfo {
     public static List<SocioInfo> GetSocios() {
         List<SocioInfo> LstSocios = new List<SocioInfo>();
         DataTable TblSocios = new DataTable();
-        string Qry = "SELECT * FROM TBL_SOCIOS";
+        string Qry = "SELECT A.*,B.FOTO,B.FILE_NAME FROM TBL_SOCIOS AS [A] LEFT JOIN TBL_FOTOS AS [B] ON A.CLIENTE_ID = B.CLIENTE_ID";
 
         Utility.Db.FillTbl(ref TblSocios, Qry);
 
+        foreach (DataRow iRow in TblSocios.Rows) { 
+            SocioInfo Item = new SocioInfo() {
+                Id =iRow.GetColumnValue("CLIENTE_ID").ToString(),
+                Nombres = iRow.GetColumnValue("NOMBRES").ToString(),
+                Apellidos = iRow.GetColumnValue("APELLIDOS").ToString(),
+                Tel = iRow.GetColumnValue("TEL").ToString(),
+                Movil = iRow.GetColumnValue("MOVIL").ToString(),
+                Sexo = iRow.GetColumnValue("SEXO").ToString(),
+                Domicilio = iRow.GetColumnValue("DOMICILIO").ToString(),
+                Email =iRow.GetColumnValue("EMAIL").ToString(),
+                Edad = iRow.GetColumnValue("EDAD").ToString(),
+                Notas = iRow.GetColumnValue("NOTAS").ToString()
+            };
+
+            Item.SocioImg.FileName =iRow.GetColumnValue("FILE_NAME").ToString();
+            Item.SocioImg.FSImage = iRow.GetColumnValue("FOTO");
 
 
+            LstSocios.Add(Item);
+
+        }
 
         return LstSocios;
     }

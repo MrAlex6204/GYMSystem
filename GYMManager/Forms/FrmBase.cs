@@ -9,14 +9,26 @@ using System.Windows.Forms;
 using Data.SQLTransac;
 
 public partial class FrmBase : Form {
+
+    #region Declarations
+
     private bool _bFlagMouseDown = false;
     private int offSetX = 0, OffSetY = 0;
-    
+
+    #endregion
+
+    #region Constructor Class
+
     public FrmBase() {
         InitializeComponent();
         cmdMinimize.Visible = this.MinimizeBox;
         AddKeyPressEventHandler(this);
     }
+
+    #endregion
+
+
+
 
     private void _DrawBorders() {
         System.Drawing.Graphics Graphic = this.CreateGraphics();
@@ -28,20 +40,33 @@ public partial class FrmBase : Form {
         Pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
         Graphic.DrawRectangle(Pen, Rectangle);
     }
-    
+
+    #region Functions
+
     public void AddKeyPressEventHandler(System.Windows.Forms.Control OwnerControl) {
         if (OwnerControl.Controls.Count > 0) {
             foreach (Control iControl in OwnerControl.Controls) {
                 AddKeyPressEventHandler(iControl);
             }
         } else {
-            if ((OwnerControl is TextBox || OwnerControl is TextBoxAnimate) && !((TextBox)OwnerControl).Multiline) {
+            if (((OwnerControl is TextBox || OwnerControl is TextBoxAnimate) && !((TextBox)OwnerControl).Multiline) || OwnerControl is ComboBox) {
                 OwnerControl.KeyPress += new KeyPressEventHandler(_KeyPress);
             }
             System.Diagnostics.Debug.Print(OwnerControl.Name);
-        }    
+        }
     }
-    
+
+    public void RegisterMouseMoveEvent(Control OwnerControl) {
+        OwnerControl.MouseMove += new MouseEventHandler(this.BaseForm_MouseMove);
+        OwnerControl.MouseDown += new MouseEventHandler(this.BaseForm_MouseDown);
+        OwnerControl.MouseUp += new MouseEventHandler(this.BaseForm_MouseUp);
+    }
+
+    #endregion
+
+
+    #region Functions Events
+
     protected override void OnLoad(EventArgs e) {
         AddKeyPressEventHandler(this);
     }
@@ -52,7 +77,6 @@ public partial class FrmBase : Form {
         }
     }
 
-    #region Form Events
     protected override void OnPaint(PaintEventArgs e) {
         //using (Pen brder = new Pen(Color.Blue)) {
         //    using (System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(Color.FromArgb(128, System.Drawing.Color.Black))) {
@@ -73,19 +97,19 @@ public partial class FrmBase : Form {
         this.WindowState = FormWindowState.Minimized;
     }
 
-    private void FrmMain_MouseDown(object sender, MouseEventArgs e) {
+    public void BaseForm_MouseDown(object sender, MouseEventArgs e) {
         _bFlagMouseDown = true;
         offSetX = Cursor.Position.X - this.Left;
         OffSetY = Cursor.Position.Y - this.Top;
         this.Cursor = Cursors.SizeAll;
     }
 
-    private void FrmMain_MouseUp(object sender, MouseEventArgs e) {
+    public void BaseForm_MouseUp(object sender, MouseEventArgs e) {
         _bFlagMouseDown = false;
         this.Cursor = Cursors.Default;
     }
 
-    private void FrmMain_MouseMove(object sender, MouseEventArgs e) {
+    public void BaseForm_MouseMove(object sender, MouseEventArgs e) {
         if (_bFlagMouseDown) {
             this.Top = Cursor.Position.Y - OffSetY;
             this.Left = Cursor.Position.X - offSetX;

@@ -51,7 +51,11 @@
             this.cmdAddPartner = new AnimatedButton();
             this.lblGYMTitle = new System.Windows.Forms.Label();
             this.pnlAddPartner = new PanelPartner();
+            this.flwSocios = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlSocios = new PanelWindow();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlWndSocios.SuspendLayout();
+            this.pnlSocios.SuspendLayout();
             this.SuspendLayout();
             // 
             // animatedButton6
@@ -285,6 +289,7 @@
             this.cmdLstPartners.TabIndex = 12;
             this.cmdLstPartners.Text = "SOCIOS";
             this.cmdLstPartners.UseVisualStyleBackColor = false;
+            this.cmdLstPartners.Click += new System.EventHandler(this.cmdLstPartners_Click);
             // 
             // cmdSearchPartner
             // 
@@ -349,6 +354,7 @@
             // 
             this.lblGYMTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20F);
+            this.lblGYMTitle.ForeColor = System.Drawing.Color.Black;
             this.lblGYMTitle.Location = new System.Drawing.Point(175, 5);
             this.lblGYMTitle.Name = "lblGYMTitle";
             this.lblGYMTitle.Size = new System.Drawing.Size(742, 50);
@@ -360,9 +366,9 @@
             // 
             this.pnlAddPartner.ActionType = PanelPartner.RecordModeAction.NewRecord;
             this.pnlAddPartner.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlAddPartner.Location = new System.Drawing.Point(179, 35);
+            this.pnlAddPartner.Location = new System.Drawing.Point(169, 1);
             this.pnlAddPartner.Name = "pnlAddPartner";
-            this.pnlAddPartner.Size = new System.Drawing.Size(819, 401);
+            this.pnlAddPartner.Size = new System.Drawing.Size(836, 443);
             socioInfo1.Apellidos = null;
             socioInfo1.Domicilio = null;
             socioInfo1.Edad = null;
@@ -378,12 +384,51 @@
             this.pnlAddPartner.TabIndex = 17;
             this.pnlAddPartner.Visible = false;
             // 
+            // flwSocios
+            // 
+            this.flwSocios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flwSocios.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flwSocios.Location = new System.Drawing.Point(6, 41);
+            this.flwSocios.Name = "flwSocios";
+            this.flwSocios.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.flwSocios.Size = new System.Drawing.Size(819, 396);
+            this.flwSocios.TabIndex = 2;
+            this.flwSocios.WrapContents = false;
+            // 
+            // pnlSocios
+            // 
+            this.pnlSocios.Controls.Add(this.lblTitle);
+            this.pnlSocios.Controls.Add(this.flwSocios);
+            this.pnlSocios.Location = new System.Drawing.Point(166, 1);
+            this.pnlSocios.MenuButton = null;
+            this.pnlSocios.Name = "pnlSocios";
+            this.pnlSocios.ShowCloseButton = true;
+            this.pnlSocios.Size = new System.Drawing.Size(839, 443);
+            this.pnlSocios.TabIndex = 18;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Image = global::GYMManager.Properties.Resources.ic_account_box_black_24dp;
+            this.lblTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitle.Location = new System.Drawing.Point(6, 4);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(120, 30);
+            this.lblTitle.TabIndex = 46;
+            this.lblTitle.Text = "Socios";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 445);
+            this.Controls.Add(this.pnlSocios);
             this.Controls.Add(this.pnlWndSocios);
             this.Controls.Add(this.animatedButton6);
             this.Controls.Add(this.animatedButton5);
@@ -406,7 +451,9 @@
             this.Controls.SetChildIndex(this.animatedButton5, 0);
             this.Controls.SetChildIndex(this.animatedButton6, 0);
             this.Controls.SetChildIndex(this.pnlWndSocios, 0);
+            this.Controls.SetChildIndex(this.pnlSocios, 0);
             this.pnlWndSocios.ResumeLayout(false);
+            this.pnlSocios.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -426,4 +473,7 @@
         private AnimatedButton cmdSearchPartner;
         private PanelPartner pnlAddPartner;
         private AnimatedButton cmdLstPartners;
+        private System.Windows.Forms.FlowLayoutPanel flwSocios;
+        private PanelWindow pnlSocios;
+        private System.Windows.Forms.Label lblTitle;
     }
