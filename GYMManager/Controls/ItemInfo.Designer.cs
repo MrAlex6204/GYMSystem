@@ -80,7 +80,7 @@ partial class ItemInfo {
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEdad.AutoSize = true;
             this.lblEdad.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(126, 47);
+            this.lblEdad.Location = new System.Drawing.Point(126, 50);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(45, 15);
             this.lblEdad.TabIndex = 4;
@@ -130,19 +130,21 @@ partial class ItemInfo {
             this.mnuBorrar});
             this.mnuOptions.Name = "mnuOptions";
             this.mnuOptions.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.mnuOptions.Size = new System.Drawing.Size(105, 48);
+            this.mnuOptions.Size = new System.Drawing.Size(153, 70);
             // 
             // mnuEditar
             // 
             this.mnuEditar.Name = "mnuEditar";
-            this.mnuEditar.Size = new System.Drawing.Size(104, 22);
+            this.mnuEditar.Size = new System.Drawing.Size(152, 22);
             this.mnuEditar.Text = "Editar";
+            this.mnuEditar.Click += new System.EventHandler(this.mnuEditar_Click);
             // 
             // mnuBorrar
             // 
             this.mnuBorrar.Name = "mnuBorrar";
-            this.mnuBorrar.Size = new System.Drawing.Size(104, 22);
+            this.mnuBorrar.Size = new System.Drawing.Size(152, 22);
             this.mnuBorrar.Text = "Borrar";
+            this.mnuBorrar.Click += new System.EventHandler(this.mnuBorrar_Click);
             // 
             // cmdMenu
             // 

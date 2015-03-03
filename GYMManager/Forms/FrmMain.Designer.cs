@@ -424,7 +424,7 @@
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.BackgroundImage = global::GYMManager.Properties.Resources.WallPaper2;
+            this.BackgroundImage = global::GYMManager.Properties.Resources.GYMDefaultWallPaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 445);
             this.Controls.Add(this.pnlSocios);

@@ -15,6 +15,7 @@ using System.Windows.Forms;
             lblGYMTitle.Text = Settings.GYMTitle;            
             this.RegisterMouseMoveEvent(this.pnlAddPartner);
             this.RegisterMouseMoveEvent(this.pnlSocios);
+            this.RegisterMouseMoveEvent(this.lblGYMTitle);
         }
 
         private void cmdAddPartner_Click(object sender, EventArgs e) {

@@ -11,6 +11,12 @@ public partial class ItemInfo : UserControl {
 
     private SocioInfo _Socio = new SocioInfo();
 
+    public delegate void EditEventHandler(object sender,SocioInfo e);
+    public delegate void DeleteEventHandler(object sender, SocioInfo e);
+
+    public EditEventHandler Edit;
+    public DeleteEventHandler Delete;
+
     [Browsable(false)]
     public SocioInfo Info {
         get {
@@ -20,9 +26,9 @@ public partial class ItemInfo : UserControl {
             _Socio = value;
             if (value != null) {
                 if (value.Nombres != "" && value.Nombres != null) {
-                    lblNombres.Text = value.Nombres.ToUpper();
+                    lblNombres.Text = "#"+value.Id+" "+value.Nombres.ToUpper();
                 } else {
-                    lblNombres.Text = "S/N NOMBRES!";
+                    lblNombres.Text = "#" +value.Id+" S/N NOMBRES!";
                 }
                 if (value.Apellidos != "" && value.Apellidos != null) {
                     lblApellidos.Text = value.Apellidos.ToUpper();
@@ -55,6 +61,18 @@ public partial class ItemInfo : UserControl {
 
     private void cmdMenu_Click(object sender, EventArgs e) {
         mnuOptions.Show((Control)sender,cmdMenu.PointToClient(Cursor.Position) ,ToolStripDropDownDirection.BelowLeft);
+    }
+
+    private void mnuEditar_Click(object sender, EventArgs e) {
+        if (Edit != null) {
+            Edit(this, _Socio);
+        }
+    }
+
+    private void mnuBorrar_Click(object sender, EventArgs e) {
+        if (Delete != null) {
+            Delete(this, _Socio);
+        }
     }
     //protected override void OnResize(EventArgs e) {        
     //    base.OnResize(e);
