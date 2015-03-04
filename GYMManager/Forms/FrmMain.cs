@@ -7,41 +7,47 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-    public partial class FrmMain : FrmBase
-    {
-        public FrmMain()
-        {
-            InitializeComponent();
-            lblGYMTitle.Text = Settings.GYMTitle;            
-            this.RegisterMouseMoveEvent(this.pnlAddPartner);
-            this.RegisterMouseMoveEvent(this.pnlSocios);
-            this.RegisterMouseMoveEvent(this.lblGYMTitle);
-        }
+public partial class FrmMain : FrmBase {
+    public FrmMain() {
+        InitializeComponent();
+        lblGYMTitle.Text = Settings.GYMTitle;
+        this.RegisterMouseMoveEvent(this.pnlAddPartner);
+        this.RegisterMouseMoveEvent(this.pnlSocios);
+        this.RegisterMouseMoveEvent(this.lblGYMTitle);
+    }
 
-        private void cmdAddPartner_Click(object sender, EventArgs e) {
-            cmdSocios.DesactiveButton();
-            pnlAddPartner.Show();
-        }
+    private void cmdAddPartner_Click(object sender, EventArgs e) {
+        cmdSocios.DesactiveButton();
+        pnlAddPartner.Show();
+    }
 
-        private void FrmMain_Load(object sender, EventArgs e) {
-            this.AddKeyPressEventHandler(this);
-        }
+    private void FrmMain_Load(object sender, EventArgs e) {
+        this.AddKeyPressEventHandler(this);
+    }
 
-        private void cmdLstPartners_Click(object sender, EventArgs e) {
-            cmdSocios.DesactiveButton();
-            pnlSocios.Visible = true;
-            List<SocioInfo> LstSocios = new List<SocioInfo>();
+    private void cmdLstPartners_Click(object sender, EventArgs e) {
+        cmdSocios.DesactiveButton();
+        pnlSocios.Visible = true;
+        List<SocioInfo> LstSocios = new List<SocioInfo>();
 
-            LstSocios = SocioInfo.GetSocios();
-            flwSocios.Controls.Clear();
-            foreach (SocioInfo iSocio in LstSocios) {
-                ItemInfo item = new ItemInfo(iSocio);
-                flwSocios.Controls.Add(item);
-            }
-
-
-            
+        LstSocios = SocioInfo.GetSocios();
+        flwSocios.Controls.Clear();
+        foreach (SocioInfo iSocio in LstSocios) {
+            ItemInfo item = new ItemInfo(iSocio);
+            item.Delete += new ItemInfo.DeleteEventHandler(Delete);
+            flwSocios.Controls.Add(item);
         }
 
     }
+
+    private void Delete(object sender, SocioInfo Item) {
+        if (MessageBox.Show("Desea borrar este cliente ?", "Borrar", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes) {
+            if (Item.Delete()) {
+                MessageBox.Show("Eliminado!", "Se elimino!");
+            }
+        }
+    }
+
+
+}
 

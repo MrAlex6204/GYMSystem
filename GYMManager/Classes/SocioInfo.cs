@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 
-public  class SocioInfo {
+public class SocioInfo {
 
     #region Class Constructor
 
@@ -133,9 +133,71 @@ public  class SocioInfo {
 
         }
     }
-
     public bool Update() {
-        return false;
+        string UpdatePictureQry =
+        " UPDATE TBL_FOTOS SET " +
+        " FOTO=@FOTO,FILE_NAME=@FILE_NAME WHERE CLIENTE_ID = @ID";
+
+        string UpdateInfoQry =
+        " UPDATE TBL_SOCIOS SET " +
+        " NOMBRES = @NOMBRES,APELLIDOS = @APELLIDOS,TEL = @TEL,MOVIL = @MOVIL,SEXO = @SEXO," +
+        " DOMICILIO = @DOMICILIO,EMAIL = @EMAIL,EDAD = @EDAD,NOTAS = @NOTAS" +
+        " WHERE CLIENTE_ID = @ID";
+
+        Utility.Db.ClearSqlVars();
+        Utility.Db.AddSqlVar("@CLIENTE_ID", this.Id);
+        Utility.Db.AddSqlVar("@NOMBRES", this.Nombres);
+        Utility.Db.AddSqlVar("@APELLIDOS", this.Apellidos);
+        Utility.Db.AddSqlVar("@TEL", this.Tel);
+        Utility.Db.AddSqlVar("@MOVIL", this.Movil);
+        Utility.Db.AddSqlVar("@SEXO", this.Sexo);
+        Utility.Db.AddSqlVar("@DOMICILIO", this.Domicilio);
+        Utility.Db.AddSqlVar("@EMAIL", this.Email);
+        Utility.Db.AddSqlVar("@EDAD", this.Edad);
+        Utility.Db.AddSqlVar("@NOTAS", this.Notas);
+
+        if (Utility.Db.SqlExec(UpdateInfoQry) > 0) {
+            if (SocioImg.FSImage != null) {
+                Utility.Db.ClearSqlVars();
+                Utility.Db.AddSqlVar("@ID", this.Id);
+                Utility.Db.AddSqlVar("@FILE_NAME", this.SocioImg.FileName);
+                Utility.Db.AddSqlVar("@FOTO", this.SocioImg.FSImage);
+
+                if (Utility.Db.SqlExec(UpdatePictureQry) > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+
+            } else {
+                return true;
+            }
+        } else {
+            return true;
+        }
+    }
+    public bool Delete() {
+        string DeleteFoto =
+        "DELETE TBL_FOTOS WHERE CLIENTE_ID = @ID";
+
+        string DeleteInfoQry =
+        "DELETE TBL_SOCIOS WHERE CLIENTE_ID = @ID";
+
+        Utility.Db.ClearSqlVars();
+        Utility.Db.AddSqlVar("@ID", this.Id);
+        if (Utility.Db.SqlExec(DeleteInfoQry) > 0) {
+            Utility.Db.ClearSqlVars();
+            Utility.Db.AddSqlVar("@ID", this.Id);
+
+            if (Utility.Db.SqlExec(DeleteFoto) > 0) {
+                return true;
+            } else {
+                return false;
+            }
+
+        } else {
+            return false;
+        }
     }
 
     public static List<SocioInfo> GetSocios() {
@@ -145,21 +207,21 @@ public  class SocioInfo {
 
         Utility.Db.FillTbl(ref TblSocios, Qry);
 
-        foreach (DataRow iRow in TblSocios.Rows) { 
+        foreach (DataRow iRow in TblSocios.Rows) {
             SocioInfo Item = new SocioInfo() {
-                Id =iRow.GetColumnValue("CLIENTE_ID").ToString(),
+                Id = iRow.GetColumnValue("CLIENTE_ID").ToString(),
                 Nombres = iRow.GetColumnValue("NOMBRES").ToString(),
                 Apellidos = iRow.GetColumnValue("APELLIDOS").ToString(),
                 Tel = iRow.GetColumnValue("TEL").ToString(),
                 Movil = iRow.GetColumnValue("MOVIL").ToString(),
                 Sexo = iRow.GetColumnValue("SEXO").ToString(),
                 Domicilio = iRow.GetColumnValue("DOMICILIO").ToString(),
-                Email =iRow.GetColumnValue("EMAIL").ToString(),
+                Email = iRow.GetColumnValue("EMAIL").ToString(),
                 Edad = iRow.GetColumnValue("EDAD").ToString(),
                 Notas = iRow.GetColumnValue("NOTAS").ToString()
             };
 
-            Item.SocioImg.FileName =iRow.GetColumnValue("FILE_NAME").ToString();
+            Item.SocioImg.FileName = iRow.GetColumnValue("FILE_NAME").ToString();
             Item.SocioImg.FSImage = iRow.GetColumnValue("FOTO");
 
 
@@ -169,6 +231,7 @@ public  class SocioInfo {
 
         return LstSocios;
     }
+
     #endregion
 
 }
