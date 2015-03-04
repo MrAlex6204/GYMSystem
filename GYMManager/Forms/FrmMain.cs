@@ -34,8 +34,16 @@ public partial class FrmMain : FrmBase {
         flwSocios.Controls.Clear();
         foreach (SocioInfo iSocio in LstSocios) {
             ItemInfo item = new ItemInfo(iSocio);
+            Panel itemContainer = new Panel();
+
             item.Delete += new ItemInfo.DeleteEventHandler(Delete);
-            flwSocios.Controls.Add(item);
+            item.Dock = DockStyle.Fill;
+
+            itemContainer.Dock = DockStyle.Top;           
+            itemContainer.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            itemContainer.Controls.Add(item);            
+
+            flwSocios.Controls.Add(itemContainer);
         }
 
     }

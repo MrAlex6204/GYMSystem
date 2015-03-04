@@ -92,7 +92,7 @@ public class SocioInfo {
     public bool Save() {
         string GetIdQry = "Select @@Identity";
         string SavePictureQry =
-        "INSERT INTO TBL_FOTOS (CLIENTE_ID,FOTO,FILE_NAME) VALUES(@ID,@FOTO,@FILE_NAME)";
+        " INSERT INTO TBL_FOTOS (CLIENTE_ID,FOTO,FILE_NAME) VALUES(@ID,@FOTO,@FILE_NAME)";
         string InsertQry =
         " INSERT INTO TBL_SOCIOS " +
         " (NOMBRES,APELLIDOS,TEL,MOVIL,SEXO,DOMICILIO,EMAIL,EDAD,NOTAS)" +
@@ -178,10 +178,10 @@ public class SocioInfo {
     }
     public bool Delete() {
         string DeleteFoto =
-        "DELETE TBL_FOTOS WHERE CLIENTE_ID = @ID";
+        "DELETE FROM TBL_FOTOS WHERE CLIENTE_ID = @ID";
 
         string DeleteInfoQry =
-        "DELETE TBL_SOCIOS WHERE CLIENTE_ID = @ID";
+        "DELETE FROM TBL_SOCIOS WHERE CLIENTE_ID = @ID";
 
         Utility.Db.ClearSqlVars();
         Utility.Db.AddSqlVar("@ID", this.Id);
@@ -189,11 +189,8 @@ public class SocioInfo {
             Utility.Db.ClearSqlVars();
             Utility.Db.AddSqlVar("@ID", this.Id);
 
-            if (Utility.Db.SqlExec(DeleteFoto) > 0) {
-                return true;
-            } else {
-                return false;
-            }
+            Utility.Db.SqlExec(DeleteFoto);
+            return true;            
 
         } else {
             return false;

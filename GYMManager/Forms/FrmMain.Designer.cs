@@ -50,8 +50,8 @@
             this.cmdAddPartner = new AnimatedButton();
             this.lblGYMTitle = new System.Windows.Forms.Label();
             this.pnlAddPartner = new PanelPartner();
-            this.flwSocios = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlSocios = new PanelWindow();
+            this.flwSocios = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlWndSocios.SuspendLayout();
             this.pnlSocios.SuspendLayout();
@@ -81,9 +81,8 @@
             this.animatedButton6.Name = "animatedButton6";
             this.animatedButton6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.animatedButton6.SetAsToggleButton = false;
-            this.animatedButton6.Size = new System.Drawing.Size(168, 74);
+            this.animatedButton6.Size = new System.Drawing.Size(62, 74);
             this.animatedButton6.TabIndex = 13;
-            this.animatedButton6.Text = "        CONFIG.";
             this.animatedButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.animatedButton6.UseVisualStyleBackColor = false;
             // 
@@ -111,9 +110,8 @@
             this.animatedButton5.Name = "animatedButton5";
             this.animatedButton5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.animatedButton5.SetAsToggleButton = false;
-            this.animatedButton5.Size = new System.Drawing.Size(168, 74);
+            this.animatedButton5.Size = new System.Drawing.Size(62, 74);
             this.animatedButton5.TabIndex = 12;
-            this.animatedButton5.Text = "       NOTIFICACIONES";
             this.animatedButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.animatedButton5.UseVisualStyleBackColor = false;
             // 
@@ -141,9 +139,8 @@
             this.animatedButton4.Name = "animatedButton4";
             this.animatedButton4.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.animatedButton4.SetAsToggleButton = false;
-            this.animatedButton4.Size = new System.Drawing.Size(168, 74);
+            this.animatedButton4.Size = new System.Drawing.Size(62, 74);
             this.animatedButton4.TabIndex = 11;
-            this.animatedButton4.Text = "       REPORTES";
             this.animatedButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.animatedButton4.UseVisualStyleBackColor = false;
             // 
@@ -171,9 +168,8 @@
             this.animatedButton3.Name = "animatedButton3";
             this.animatedButton3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.animatedButton3.SetAsToggleButton = false;
-            this.animatedButton3.Size = new System.Drawing.Size(168, 74);
+            this.animatedButton3.Size = new System.Drawing.Size(62, 74);
             this.animatedButton3.TabIndex = 10;
-            this.animatedButton3.Text = "       FACTURAR";
             this.animatedButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.animatedButton3.UseVisualStyleBackColor = false;
             // 
@@ -201,9 +197,8 @@
             this.cmdSocios.Name = "cmdSocios";
             this.cmdSocios.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.cmdSocios.SetAsToggleButton = true;
-            this.cmdSocios.Size = new System.Drawing.Size(168, 74);
+            this.cmdSocios.Size = new System.Drawing.Size(62, 74);
             this.cmdSocios.TabIndex = 9;
-            this.cmdSocios.Text = "       SOCIOS";
             this.cmdSocios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdSocios.UseVisualStyleBackColor = false;
             // 
@@ -231,9 +226,8 @@
             this.cmdHome.Name = "cmdHome";
             this.cmdHome.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.cmdHome.SetAsToggleButton = true;
-            this.cmdHome.Size = new System.Drawing.Size(168, 73);
+            this.cmdHome.Size = new System.Drawing.Size(62, 73);
             this.cmdHome.TabIndex = 8;
-            this.cmdHome.Text = "       HOME";
             this.cmdHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmdHome.UseVisualStyleBackColor = false;
             // 
@@ -253,7 +247,7 @@
             this.pnlWndSocios.Controls.Add(this.cmdLstPartners);
             this.pnlWndSocios.Controls.Add(this.cmdSearchPartner);
             this.pnlWndSocios.Controls.Add(this.cmdAddPartner);
-            this.pnlWndSocios.Location = new System.Drawing.Point(166, 1);
+            this.pnlWndSocios.Location = new System.Drawing.Point(58, 1);
             this.pnlWndSocios.MenuButton = this.cmdSocios;
             this.pnlWndSocios.Name = "pnlWndSocios";
             this.pnlWndSocios.ShowCloseButton = false;
@@ -353,10 +347,10 @@
             // 
             this.lblGYMTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20F);
-            this.lblGYMTitle.ForeColor = System.Drawing.Color.Maroon;
-            this.lblGYMTitle.Location = new System.Drawing.Point(175, 5);
+            this.lblGYMTitle.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblGYMTitle.Location = new System.Drawing.Point(67, 2);
             this.lblGYMTitle.Name = "lblGYMTitle";
-            this.lblGYMTitle.Size = new System.Drawing.Size(742, 50);
+            this.lblGYMTitle.Size = new System.Drawing.Size(742, 46);
             this.lblGYMTitle.TabIndex = 16;
             this.lblGYMTitle.Text = "[GYM TITLE]";
             this.lblGYMTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -365,9 +359,9 @@
             // 
             this.pnlAddPartner.ActionType = PanelPartner.RecordModeAction.NewRecord;
             this.pnlAddPartner.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlAddPartner.Location = new System.Drawing.Point(169, 1);
+            this.pnlAddPartner.Location = new System.Drawing.Point(56, 1);
             this.pnlAddPartner.Name = "pnlAddPartner";
-            this.pnlAddPartner.Size = new System.Drawing.Size(836, 443);
+            this.pnlAddPartner.Size = new System.Drawing.Size(949, 443);
             socioInfo1.Apellidos = null;
             socioInfo1.Domicilio = null;
             socioInfo1.Edad = null;
@@ -383,29 +377,24 @@
             this.pnlAddPartner.TabIndex = 17;
             this.pnlAddPartner.Visible = false;
             // 
-            // flwSocios
-            // 
-            this.flwSocios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flwSocios.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flwSocios.Location = new System.Drawing.Point(6, 41);
-            this.flwSocios.Name = "flwSocios";
-            this.flwSocios.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.flwSocios.Size = new System.Drawing.Size(819, 396);
-            this.flwSocios.TabIndex = 2;
-            this.flwSocios.WrapContents = false;
-            // 
             // pnlSocios
             // 
-            this.pnlSocios.Controls.Add(this.lblTitle);
             this.pnlSocios.Controls.Add(this.flwSocios);
-            this.pnlSocios.Location = new System.Drawing.Point(166, 1);
+            this.pnlSocios.Controls.Add(this.lblTitle);
+            this.pnlSocios.Location = new System.Drawing.Point(59, 1);
             this.pnlSocios.MenuButton = null;
             this.pnlSocios.Name = "pnlSocios";
             this.pnlSocios.ShowCloseButton = true;
-            this.pnlSocios.Size = new System.Drawing.Size(839, 443);
+            this.pnlSocios.Size = new System.Drawing.Size(948, 443);
             this.pnlSocios.TabIndex = 18;
+            // 
+            // flwSocios
+            // 
+            this.flwSocios.AutoScroll = true;
+            this.flwSocios.Location = new System.Drawing.Point(5, 43);
+            this.flwSocios.Name = "flwSocios";
+            this.flwSocios.Size = new System.Drawing.Size(934, 389);
+            this.flwSocios.TabIndex = 47;
             // 
             // lblTitle
             // 
@@ -472,7 +461,7 @@
         private AnimatedButton cmdSearchPartner;
         private PanelPartner pnlAddPartner;
         private AnimatedButton cmdLstPartners;
-        private System.Windows.Forms.FlowLayoutPanel flwSocios;
         private PanelWindow pnlSocios;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel flwSocios;
     }
