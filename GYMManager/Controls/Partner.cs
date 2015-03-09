@@ -157,7 +157,7 @@ class PanelPartner : System.Windows.Forms.UserControl {
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
             this.label4.Location = new System.Drawing.Point(457, 241);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 17);
@@ -205,7 +205,7 @@ class PanelPartner : System.Windows.Forms.UserControl {
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.picPartnerPhoto);
-            this.panel1.Location = new System.Drawing.Point(12, 46);
+            this.panel1.Location = new System.Drawing.Point(18, 46);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(3);
             this.panel1.Size = new System.Drawing.Size(273, 360);
@@ -229,7 +229,7 @@ class PanelPartner : System.Windows.Forms.UserControl {
             this.lnkBrow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.lnkBrow.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lnkBrow.LinkColor = System.Drawing.Color.Navy;
-            this.lnkBrow.Location = new System.Drawing.Point(12, 412);
+            this.lnkBrow.Location = new System.Drawing.Point(21, 412);
             this.lnkBrow.Name = "lnkBrow";
             this.lnkBrow.Size = new System.Drawing.Size(73, 16);
             this.lnkBrow.TabIndex = 11;

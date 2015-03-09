@@ -37,7 +37,10 @@
             MouseBehaviorExtension mouseBehaviorExtension9 = new MouseBehaviorExtension();
             SocioInfo socioInfo1 = new SocioInfo();
             SocioInfo.ImgInfo imgInfo1 = new SocioInfo.ImgInfo();
-            this.animatedButton6 = new AnimatedButton();
+            MouseBehaviorExtension mouseBehaviorExtension10 = new MouseBehaviorExtension();
+            MouseBehaviorExtension mouseBehaviorExtension11 = new MouseBehaviorExtension();
+            MouseBehaviorExtension mouseBehaviorExtension12 = new MouseBehaviorExtension();
+            this.cmdConfig = new AnimatedButton();
             this.animatedButton5 = new AnimatedButton();
             this.animatedButton4 = new AnimatedButton();
             this.animatedButton3 = new AnimatedButton();
@@ -51,22 +54,28 @@
             this.lblGYMTitle = new System.Windows.Forms.Label();
             this.pnlAddPartner = new PanelPartner();
             this.pnlSocios = new PanelWindow();
-            this.flwSocios = new System.Windows.Forms.Panel();
+            this.pnlSociosCollection = new ItemInfoCollection();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.pnlConfig = new PanelWindow();
+            this.cmdCancel = new AnimatedButton();
+            this.txtTitle = new TextBoxAnimate();
+            this.cmdSaveTitle = new AnimatedButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlWndSocios.SuspendLayout();
             this.pnlSocios.SuspendLayout();
+            this.pnlConfig.SuspendLayout();
             this.SuspendLayout();
             // 
-            // animatedButton6
+            // cmdConfig
             // 
-            this.animatedButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.animatedButton6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.animatedButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.animatedButton6.Font = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.animatedButton6.ForeColor = System.Drawing.Color.DimGray;
-            this.animatedButton6.Image = global::GYMManager.Properties.Resources.ic_settings_grey600_24dp;
-            this.animatedButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton6.Location = new System.Drawing.Point(1, 370);
+            this.cmdConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdConfig.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdConfig.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.cmdConfig.ForeColor = System.Drawing.Color.DimGray;
+            this.cmdConfig.Image = global::GYMManager.Properties.Resources.ic_settings_grey600_24dp;
+            this.cmdConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdConfig.Location = new System.Drawing.Point(1, 370);
             mouseBehaviorExtension1.HoverBorderColor = System.Drawing.Color.Empty;
             mouseBehaviorExtension1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension1.HoverForecolor = System.Drawing.Color.Silver;
@@ -77,14 +86,15 @@
             mouseBehaviorExtension1.LeaveForecolor = System.Drawing.Color.DimGray;
             mouseBehaviorExtension1.LeaveImage = global::GYMManager.Properties.Resources.ic_settings_grey600_24dp;
             mouseBehaviorExtension1.LeaveText = null;
-            this.animatedButton6.MouseBehavior = mouseBehaviorExtension1;
-            this.animatedButton6.Name = "animatedButton6";
-            this.animatedButton6.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.animatedButton6.SetAsToggleButton = false;
-            this.animatedButton6.Size = new System.Drawing.Size(62, 74);
-            this.animatedButton6.TabIndex = 13;
-            this.animatedButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.animatedButton6.UseVisualStyleBackColor = false;
+            this.cmdConfig.MouseBehavior = mouseBehaviorExtension1;
+            this.cmdConfig.Name = "cmdConfig";
+            this.cmdConfig.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.cmdConfig.SetAsToggleButton = true;
+            this.cmdConfig.Size = new System.Drawing.Size(62, 74);
+            this.cmdConfig.TabIndex = 13;
+            this.cmdConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdConfig.UseVisualStyleBackColor = false;
+            this.cmdConfig.Click += new System.EventHandler(this.cmdConfig_Click);
             // 
             // animatedButton5
             // 
@@ -346,8 +356,8 @@
             // lblGYMTitle
             // 
             this.lblGYMTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 20F);
-            this.lblGYMTitle.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblGYMTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGYMTitle.ForeColor = System.Drawing.Color.Black;
             this.lblGYMTitle.Location = new System.Drawing.Point(67, 2);
             this.lblGYMTitle.Name = "lblGYMTitle";
             this.lblGYMTitle.Size = new System.Drawing.Size(742, 46);
@@ -379,22 +389,24 @@
             // 
             // pnlSocios
             // 
-            this.pnlSocios.Controls.Add(this.flwSocios);
+            this.pnlSocios.Controls.Add(this.pnlSociosCollection);
             this.pnlSocios.Controls.Add(this.lblTitle);
-            this.pnlSocios.Location = new System.Drawing.Point(59, 1);
+            this.pnlSocios.Location = new System.Drawing.Point(63, 1);
             this.pnlSocios.MenuButton = null;
             this.pnlSocios.Name = "pnlSocios";
             this.pnlSocios.ShowCloseButton = true;
-            this.pnlSocios.Size = new System.Drawing.Size(948, 443);
+            this.pnlSocios.Size = new System.Drawing.Size(943, 443);
             this.pnlSocios.TabIndex = 18;
             // 
-            // flwSocios
+            // pnlSociosCollection
             // 
-            this.flwSocios.AutoScroll = true;
-            this.flwSocios.Location = new System.Drawing.Point(5, 43);
-            this.flwSocios.Name = "flwSocios";
-            this.flwSocios.Size = new System.Drawing.Size(934, 389);
-            this.flwSocios.TabIndex = 47;
+            this.pnlSociosCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSociosCollection.Location = new System.Drawing.Point(7, 43);
+            this.pnlSociosCollection.Name = "pnlSociosCollection";
+            this.pnlSociosCollection.Size = new System.Drawing.Size(929, 394);
+            this.pnlSociosCollection.TabIndex = 47;
             // 
             // lblTitle
             // 
@@ -410,15 +422,119 @@
             this.lblTitle.Text = "Socios";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlConfig
+            // 
+            this.pnlConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.pnlConfig.Controls.Add(this.cmdCancel);
+            this.pnlConfig.Controls.Add(this.txtTitle);
+            this.pnlConfig.Controls.Add(this.cmdSaveTitle);
+            this.pnlConfig.Controls.Add(this.label1);
+            this.pnlConfig.Location = new System.Drawing.Point(59, 1);
+            this.pnlConfig.MenuButton = this.cmdConfig;
+            this.pnlConfig.Name = "pnlConfig";
+            this.pnlConfig.ShowCloseButton = false;
+            this.pnlConfig.Size = new System.Drawing.Size(357, 443);
+            this.pnlConfig.TabIndex = 19;
+            // 
+            // cmdCancel
+            // 
+            this.cmdCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancel.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.cmdCancel.ForeColor = System.Drawing.Color.DimGray;
+            this.cmdCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancel.Location = new System.Drawing.Point(257, 67);
+            mouseBehaviorExtension10.HoverBorderColor = System.Drawing.Color.Empty;
+            mouseBehaviorExtension10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            mouseBehaviorExtension10.HoverForecolor = System.Drawing.Color.Silver;
+            mouseBehaviorExtension10.HoverImage = null;
+            mouseBehaviorExtension10.HoverText = null;
+            mouseBehaviorExtension10.LeaveBorderColor = System.Drawing.Color.Empty;
+            mouseBehaviorExtension10.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            mouseBehaviorExtension10.LeaveForecolor = System.Drawing.Color.DimGray;
+            mouseBehaviorExtension10.LeaveImage = null;
+            mouseBehaviorExtension10.LeaveText = null;
+            this.cmdCancel.MouseBehavior = mouseBehaviorExtension10;
+            this.cmdCancel.Name = "cmdCancel";
+            this.cmdCancel.SetAsToggleButton = false;
+            this.cmdCancel.Size = new System.Drawing.Size(86, 22);
+            this.cmdCancel.TabIndex = 14;
+            this.cmdCancel.Text = "Cancelar";
+            this.cmdCancel.UseVisualStyleBackColor = false;
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            mouseBehaviorExtension11.HoverBorderColor = System.Drawing.Color.Empty;
+            mouseBehaviorExtension11.HoverColor = System.Drawing.Color.Silver;
+            mouseBehaviorExtension11.HoverForecolor = System.Drawing.Color.DimGray;
+            mouseBehaviorExtension11.HoverImage = null;
+            mouseBehaviorExtension11.HoverText = "";
+            mouseBehaviorExtension11.LeaveBorderColor = System.Drawing.Color.Empty;
+            mouseBehaviorExtension11.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            mouseBehaviorExtension11.LeaveForecolor = System.Drawing.Color.Goldenrod;
+            mouseBehaviorExtension11.LeaveImage = null;
+            mouseBehaviorExtension11.LeaveText = "";
+            this.txtTitle.FocusBehavior = mouseBehaviorExtension11;
+            this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtTitle.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtTitle.Location = new System.Drawing.Point(13, 36);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(330, 26);
+            this.txtTitle.TabIndex = 13;
+            // 
+            // cmdSaveTitle
+            // 
+            this.cmdSaveTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdSaveTitle.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdSaveTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSaveTitle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.cmdSaveTitle.ForeColor = System.Drawing.Color.DimGray;
+            this.cmdSaveTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdSaveTitle.Location = new System.Drawing.Point(165, 67);
+            mouseBehaviorExtension12.HoverBorderColor = System.Drawing.Color.Empty;
+            mouseBehaviorExtension12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            mouseBehaviorExtension12.HoverForecolor = System.Drawing.Color.Silver;
+            mouseBehaviorExtension12.HoverImage = null;
+            mouseBehaviorExtension12.HoverText = null;
+            mouseBehaviorExtension12.LeaveBorderColor = System.Drawing.Color.Empty;
+            mouseBehaviorExtension12.LeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            mouseBehaviorExtension12.LeaveForecolor = System.Drawing.Color.DimGray;
+            mouseBehaviorExtension12.LeaveImage = null;
+            mouseBehaviorExtension12.LeaveText = null;
+            this.cmdSaveTitle.MouseBehavior = mouseBehaviorExtension12;
+            this.cmdSaveTitle.Name = "cmdSaveTitle";
+            this.cmdSaveTitle.SetAsToggleButton = false;
+            this.cmdSaveTitle.Size = new System.Drawing.Size(86, 22);
+            this.cmdSaveTitle.TabIndex = 12;
+            this.cmdSaveTitle.Text = "Guardar";
+            this.cmdSaveTitle.UseVisualStyleBackColor = false;
+            this.cmdSaveTitle.Click += new System.EventHandler(this.cmdSaveTitle_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(13, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Titulo :";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackgroundImage = global::GYMManager.Properties.Resources.GYMDefaultWallPaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 445);
+            this.Controls.Add(this.pnlConfig);
             this.Controls.Add(this.pnlSocios);
             this.Controls.Add(this.pnlWndSocios);
-            this.Controls.Add(this.animatedButton6);
+            this.Controls.Add(this.cmdConfig);
             this.Controls.Add(this.animatedButton5);
             this.Controls.Add(this.animatedButton4);
             this.Controls.Add(this.animatedButton3);
@@ -437,18 +553,21 @@
             this.Controls.SetChildIndex(this.animatedButton3, 0);
             this.Controls.SetChildIndex(this.animatedButton4, 0);
             this.Controls.SetChildIndex(this.animatedButton5, 0);
-            this.Controls.SetChildIndex(this.animatedButton6, 0);
+            this.Controls.SetChildIndex(this.cmdConfig, 0);
             this.Controls.SetChildIndex(this.pnlWndSocios, 0);
             this.Controls.SetChildIndex(this.pnlSocios, 0);
+            this.Controls.SetChildIndex(this.pnlConfig, 0);
             this.pnlWndSocios.ResumeLayout(false);
             this.pnlSocios.ResumeLayout(false);
+            this.pnlConfig.ResumeLayout(false);
+            this.pnlConfig.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private AnimatedButton animatedButton6;
+        private AnimatedButton cmdConfig;
         private AnimatedButton animatedButton5;
         private AnimatedButton animatedButton4;
         private AnimatedButton animatedButton3;
@@ -463,5 +582,10 @@
         private AnimatedButton cmdLstPartners;
         private PanelWindow pnlSocios;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Panel flwSocios;
+        private PanelWindow pnlConfig;
+        private TextBoxAnimate txtTitle;
+        private AnimatedButton cmdSaveTitle;
+        private System.Windows.Forms.Label label1;
+        private AnimatedButton cmdCancel;
+        private ItemInfoCollection pnlSociosCollection;
     }

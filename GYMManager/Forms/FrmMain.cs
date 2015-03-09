@@ -28,32 +28,26 @@ public partial class FrmMain : FrmBase {
     private void cmdLstPartners_Click(object sender, EventArgs e) {
         cmdSocios.DesactiveButton();
         pnlSocios.Visible = true;
-        List<SocioInfo> LstSocios = new List<SocioInfo>();
-
-        LstSocios = SocioInfo.GetSocios();
-        flwSocios.Controls.Clear();
-        foreach (SocioInfo iSocio in LstSocios) {
-            ItemInfo item = new ItemInfo(iSocio);
-            Panel itemContainer = new Panel();
-
-            item.Delete += new ItemInfo.DeleteEventHandler(Delete);
-            item.Dock = DockStyle.Fill;
-
-            itemContainer.Dock = DockStyle.Top;           
-            itemContainer.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            itemContainer.Controls.Add(item);            
-
-            flwSocios.Controls.Add(itemContainer);
-        }
-
+        pnlSociosCollection.LoadSocios();
     }
 
-    private void Delete(object sender, SocioInfo Item) {
-        if (MessageBox.Show("Desea borrar este cliente ?", "Borrar", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes) {
-            if (Item.Delete()) {
-                MessageBox.Show("Eliminado!", "Se elimino!");
-            }
-        }
+   
+
+    private void cmdConfig_Click(object sender, EventArgs e) {
+        txtTitle.Text = Settings.GYMTitle;
+    }
+
+    private void cmdSaveTitle_Click(object sender, EventArgs e) {
+        Settings.GYMTitle = txtTitle.Text;
+        Settings.Save();
+        lblGYMTitle.Text = Settings.GYMTitle;
+        MessageBox.Show("El titulo de a cambiado satisfactoriamente!", "Listo!", MessageBoxButtons.OK, MessageBoxIcon.None);
+        cmdConfig.DesactiveButton();
+
+    }
+    
+    private void cmdCancel_Click(object sender, EventArgs e) {
+        cmdConfig.DesactiveButton();
     }
 
 

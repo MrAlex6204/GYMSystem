@@ -70,7 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Configuration.cs" />
     <Compile Include="Classes\SocioInfo.cs" />
     <Compile Include="Classes\Untility.cs" />
     <Compile Include="Classes\Settings.cs" />
@@ -78,6 +77,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\FocusBehaviorExtension.cs" />
+    <Compile Include="Controls\ItemInfoCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\MouseBehaviorExtension.cs" />
     <Compile Include="Controls\Partner.cs">
       <SubType>UserControl</SubType>
