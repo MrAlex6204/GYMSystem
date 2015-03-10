@@ -175,6 +175,11 @@
     <None Include="Resources\vertical_menu_icon_normal.png" />
     <None Include="Resources\vertical_menu_icon_hover.png" />
     <None Include="Resources\WallPaper2.jpg" />
+    <None Include="Resources\ic_mood_grey600_48dp.png" />
+    <None Include="Resources\ic_place_grey600_18dp.png" />
+    <None Include="Resources\ic_mood_grey600_48dp1.png" />
+    <None Include="Resources\ic_settings_grey600_18dp.png" />
+    <None Include="Resources\ic_settings_black_18dp.png" />
     <Content Include="TargetDesign\ButtonDesign.png" />
     <Content Include="TargetDesign\LstDesign.png" />
     <Content Include="TargetDesign\LstDesign2.png" />

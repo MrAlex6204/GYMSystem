@@ -31,8 +31,6 @@ public partial class FrmMain : FrmBase {
         pnlSociosCollection.LoadSocios();
     }
 
-   
-
     private void cmdConfig_Click(object sender, EventArgs e) {
         txtTitle.Text = Settings.GYMTitle;
     }
@@ -43,7 +41,6 @@ public partial class FrmMain : FrmBase {
         lblGYMTitle.Text = Settings.GYMTitle;
         MessageBox.Show("El titulo de a cambiado satisfactoriamente!", "Listo!", MessageBoxButtons.OK, MessageBoxIcon.None);
         cmdConfig.DesactiveButton();
-
     }
     
     private void cmdCancel_Click(object sender, EventArgs e) {

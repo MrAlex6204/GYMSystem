@@ -83,6 +83,7 @@ class PanelWindow : System.Windows.Forms.Panel {
     enum Type {
         File, Folder
     }
+
     public AnimatedButton MenuButton {
         get {
             return _ButtonOwner;
@@ -93,7 +94,6 @@ class PanelWindow : System.Windows.Forms.Panel {
             if (value != null) {
                 _ButtonOwner.StateChange += new AnimatedButton.StateChangeHandler(_OwnerStateChangeEvent);
                 _RegisteredButtons.Add(_ButtonOwner);
-
             }
         }
 

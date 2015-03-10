@@ -25,8 +25,9 @@ public partial class ItemInfo : UserControl {
         set {
             _Socio = value;
             if (value != null) {
+                lblClienteId.Text = value.Id.Trim();
                 if (value.Nombres != "" && value.Nombres != null) {
-                    lblNombres.Text = "#" + value.Id + " " + value.Nombres.ToUpper();
+                    lblNombres.Text = value.Nombres.ToUpper();
                 } else {
                     lblNombres.Text = "#" + value.Id + " S/N NOMBRES!";
                 }
@@ -52,19 +53,11 @@ public partial class ItemInfo : UserControl {
     }
 
     public ItemInfo() {
-        InitializeComponent();
-        this.pnlSubMenu.LostFocus += delegate(object sender, EventArgs e) {
-            pnlSubMenu.Visible = false;
-        };
+        InitializeComponent();        
     }
     public ItemInfo(SocioInfo Info) {
         InitializeComponent();
         this.Info = Info;
-    }
-
-    private void cmdMenu_Click(object sender, EventArgs e) {
-        pnlSubMenu.Visible = true;
-        // mnuOptions.Show((Control)sender,cmdMenu.PointToClient(Cursor.Position) ,ToolStripDropDownDirection.BelowLeft);
     }
 
     private void mnuEditar_Click(object sender, EventArgs e) {
@@ -79,54 +72,18 @@ public partial class ItemInfo : UserControl {
         }
     }
 
-
-    private void cmdEdit_Click(object sender, EventArgs e) {
-        if (Edit != null) {
-            Edit(this, _Socio);
-        }
-    }
-
     private void cmdDelete_Click(object sender, EventArgs e) {
         if (Delete != null) {
             Delete(this, _Socio);
         }
     }
 
-    private void lblDomicilio_Click(object sender, EventArgs e) {
-
-    }
-
-    private void label2_Click(object sender, EventArgs e) {
-
-    }
-
-    private void lblEdad_Click(object sender, EventArgs e) {
-
-    }
-
-    private void label1_Click(object sender, EventArgs e) {
-
-    }
-
-    private void lblApellidos_Click(object sender, EventArgs e) {
-
-    }
-
-    private void lblNombres_Click(object sender, EventArgs e) {
-
-    }
-
-    private void ItemInfo_MouseMove(object sender, MouseEventArgs e) {
-        if (this.BackColor != Color.DarkCyan) {
-            this.BackColor = Color.DarkCyan;
+    private void cmConfigAccount_Click(object sender, EventArgs e) {
+if (Edit != null) {
+            Edit(this, _Socio);
         }
     }
 
-    private void ItemInfo_MouseLeave(object sender, EventArgs e) {
-        if (this.BackColor != Color.WhiteSmoke) {
-            this.BackColor = Color.WhiteSmoke;
-        }
-    }
     //protected override void OnResize(EventArgs e) {        
     //    base.OnResize(e);
     //    cmdMenu.Location = new Point(this.Width - 23, cmdMenu.Location.Y);

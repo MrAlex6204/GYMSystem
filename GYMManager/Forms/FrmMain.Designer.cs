@@ -403,6 +403,7 @@
             this.pnlSociosCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSociosCollection.AutoScroll = true;
             this.pnlSociosCollection.Location = new System.Drawing.Point(7, 43);
             this.pnlSociosCollection.Name = "pnlSociosCollection";
             this.pnlSociosCollection.Size = new System.Drawing.Size(929, 394);
@@ -494,7 +495,7 @@
             this.cmdSaveTitle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.cmdSaveTitle.ForeColor = System.Drawing.Color.DimGray;
             this.cmdSaveTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdSaveTitle.Location = new System.Drawing.Point(165, 67);
+            this.cmdSaveTitle.Location = new System.Drawing.Point(14, 67);
             mouseBehaviorExtension12.HoverBorderColor = System.Drawing.Color.Empty;
             mouseBehaviorExtension12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             mouseBehaviorExtension12.HoverForecolor = System.Drawing.Color.Silver;
