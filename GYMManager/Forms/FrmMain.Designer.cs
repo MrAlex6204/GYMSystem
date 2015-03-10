@@ -61,6 +61,8 @@
             this.txtTitle = new TextBoxAnimate();
             this.cmdSaveTitle = new AnimatedButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlWndSocios.SuspendLayout();
             this.pnlSocios.SuspendLayout();
             this.pnlConfig.SuspendLayout();
@@ -257,11 +259,13 @@
             this.pnlWndSocios.Controls.Add(this.cmdLstPartners);
             this.pnlWndSocios.Controls.Add(this.cmdSearchPartner);
             this.pnlWndSocios.Controls.Add(this.cmdAddPartner);
-            this.pnlWndSocios.Location = new System.Drawing.Point(58, 1);
+            this.pnlWndSocios.Location = new System.Drawing.Point(63, 1);
             this.pnlWndSocios.MenuButton = this.cmdSocios;
             this.pnlWndSocios.Name = "pnlWndSocios";
             this.pnlWndSocios.ShowCloseButton = false;
             this.pnlWndSocios.Size = new System.Drawing.Size(217, 443);
+            this.pnlWndSocios.SlideIn = PanelWindow.SlideType.None;
+            this.pnlWndSocios.SlideOut = PanelWindow.SlideType.None;
             this.pnlWndSocios.TabIndex = 14;
             // 
             // cmdLstPartners
@@ -369,9 +373,9 @@
             // 
             this.pnlAddPartner.ActionType = PanelPartner.RecordModeAction.NewRecord;
             this.pnlAddPartner.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlAddPartner.Location = new System.Drawing.Point(56, 1);
+            this.pnlAddPartner.Location = new System.Drawing.Point(443, 207);
             this.pnlAddPartner.Name = "pnlAddPartner";
-            this.pnlAddPartner.Size = new System.Drawing.Size(949, 443);
+            this.pnlAddPartner.Size = new System.Drawing.Size(700, 402);
             socioInfo1.Apellidos = null;
             socioInfo1.Domicilio = null;
             socioInfo1.Edad = null;
@@ -391,11 +395,13 @@
             // 
             this.pnlSocios.Controls.Add(this.pnlSociosCollection);
             this.pnlSocios.Controls.Add(this.lblTitle);
-            this.pnlSocios.Location = new System.Drawing.Point(63, 1);
+            this.pnlSocios.Location = new System.Drawing.Point(344, 317);
             this.pnlSocios.MenuButton = null;
             this.pnlSocios.Name = "pnlSocios";
             this.pnlSocios.ShowCloseButton = true;
-            this.pnlSocios.Size = new System.Drawing.Size(943, 443);
+            this.pnlSocios.Size = new System.Drawing.Size(868, 425);
+            this.pnlSocios.SlideIn = PanelWindow.SlideType.None;
+            this.pnlSocios.SlideOut = PanelWindow.SlideType.None;
             this.pnlSocios.TabIndex = 18;
             // 
             // pnlSociosCollection
@@ -404,9 +410,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSociosCollection.AutoScroll = true;
-            this.pnlSociosCollection.Location = new System.Drawing.Point(7, 43);
+            this.pnlSociosCollection.Location = new System.Drawing.Point(11, 37);
             this.pnlSociosCollection.Name = "pnlSociosCollection";
-            this.pnlSociosCollection.Size = new System.Drawing.Size(929, 394);
+            this.pnlSociosCollection.Size = new System.Drawing.Size(843, 374);
             this.pnlSociosCollection.TabIndex = 47;
             // 
             // lblTitle
@@ -430,11 +436,13 @@
             this.pnlConfig.Controls.Add(this.txtTitle);
             this.pnlConfig.Controls.Add(this.cmdSaveTitle);
             this.pnlConfig.Controls.Add(this.label1);
-            this.pnlConfig.Location = new System.Drawing.Point(59, 1);
+            this.pnlConfig.Location = new System.Drawing.Point(58, 319);
             this.pnlConfig.MenuButton = this.cmdConfig;
             this.pnlConfig.Name = "pnlConfig";
             this.pnlConfig.ShowCloseButton = false;
-            this.pnlConfig.Size = new System.Drawing.Size(357, 443);
+            this.pnlConfig.Size = new System.Drawing.Size(351, 125);
+            this.pnlConfig.SlideIn = PanelWindow.SlideType.Left;
+            this.pnlConfig.SlideOut = PanelWindow.SlideType.Rigth;
             this.pnlConfig.TabIndex = 19;
             // 
             // cmdCancel
@@ -526,13 +534,32 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Titulo :";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(192, 74);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(282, 122);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackgroundImage = global::GYMManager.Properties.Resources.GYMDefaultWallPaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 445);
-            this.Controls.Add(this.pnlConfig);
             this.Controls.Add(this.pnlSocios);
             this.Controls.Add(this.pnlWndSocios);
             this.Controls.Add(this.cmdConfig);
@@ -541,14 +568,16 @@
             this.Controls.Add(this.animatedButton3);
             this.Controls.Add(this.cmdSocios);
             this.Controls.Add(this.cmdHome);
-            this.Controls.Add(this.pnlAddPartner);
+            this.Controls.Add(this.pnlConfig);
             this.Controls.Add(this.lblGYMTitle);
+            this.Controls.Add(this.pnlAddPartner);
             this.MinimizeBox = false;
             this.Name = "FrmMain";
             this.Text = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.Controls.SetChildIndex(this.lblGYMTitle, 0);
             this.Controls.SetChildIndex(this.pnlAddPartner, 0);
+            this.Controls.SetChildIndex(this.lblGYMTitle, 0);
+            this.Controls.SetChildIndex(this.pnlConfig, 0);
             this.Controls.SetChildIndex(this.cmdHome, 0);
             this.Controls.SetChildIndex(this.cmdSocios, 0);
             this.Controls.SetChildIndex(this.animatedButton3, 0);
@@ -557,7 +586,6 @@
             this.Controls.SetChildIndex(this.cmdConfig, 0);
             this.Controls.SetChildIndex(this.pnlWndSocios, 0);
             this.Controls.SetChildIndex(this.pnlSocios, 0);
-            this.Controls.SetChildIndex(this.pnlConfig, 0);
             this.pnlWndSocios.ResumeLayout(false);
             this.pnlSocios.ResumeLayout(false);
             this.pnlConfig.ResumeLayout(false);
@@ -589,4 +617,7 @@
         private System.Windows.Forms.Label label1;
         private AnimatedButton cmdCancel;
         private ItemInfoCollection pnlSociosCollection;
+     
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }

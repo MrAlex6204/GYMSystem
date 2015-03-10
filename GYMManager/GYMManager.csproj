@@ -81,6 +81,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\MouseBehaviorExtension.cs" />
+    <Compile Include="Controls\PanelWindowContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\Partner.cs">
       <SubType>UserControl</SubType>
     </Compile>
