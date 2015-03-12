@@ -373,9 +373,9 @@
             // 
             this.pnlAddPartner.ActionType = PanelPartner.RecordModeAction.NewRecord;
             this.pnlAddPartner.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlAddPartner.Location = new System.Drawing.Point(443, 207);
+            this.pnlAddPartner.Location = new System.Drawing.Point(63, 1);
             this.pnlAddPartner.Name = "pnlAddPartner";
-            this.pnlAddPartner.Size = new System.Drawing.Size(700, 402);
+            this.pnlAddPartner.Size = new System.Drawing.Size(1205, 443);
             socioInfo1.Apellidos = null;
             socioInfo1.Domicilio = null;
             socioInfo1.Edad = null;
@@ -393,13 +393,14 @@
             // 
             // pnlSocios
             // 
+            this.pnlSocios.Controls.Add(this.pnlConfig);
             this.pnlSocios.Controls.Add(this.pnlSociosCollection);
             this.pnlSocios.Controls.Add(this.lblTitle);
-            this.pnlSocios.Location = new System.Drawing.Point(344, 317);
+            this.pnlSocios.Location = new System.Drawing.Point(63, 2);
             this.pnlSocios.MenuButton = null;
             this.pnlSocios.Name = "pnlSocios";
             this.pnlSocios.ShowCloseButton = true;
-            this.pnlSocios.Size = new System.Drawing.Size(868, 425);
+            this.pnlSocios.Size = new System.Drawing.Size(1205, 442);
             this.pnlSocios.SlideIn = PanelWindow.SlideType.None;
             this.pnlSocios.SlideOut = PanelWindow.SlideType.None;
             this.pnlSocios.TabIndex = 18;
@@ -412,7 +413,7 @@
             this.pnlSociosCollection.AutoScroll = true;
             this.pnlSociosCollection.Location = new System.Drawing.Point(11, 37);
             this.pnlSociosCollection.Name = "pnlSociosCollection";
-            this.pnlSociosCollection.Size = new System.Drawing.Size(843, 374);
+            this.pnlSociosCollection.Size = new System.Drawing.Size(1180, 391);
             this.pnlSociosCollection.TabIndex = 47;
             // 
             // lblTitle
@@ -436,11 +437,11 @@
             this.pnlConfig.Controls.Add(this.txtTitle);
             this.pnlConfig.Controls.Add(this.cmdSaveTitle);
             this.pnlConfig.Controls.Add(this.label1);
-            this.pnlConfig.Location = new System.Drawing.Point(58, 319);
+            this.pnlConfig.Location = new System.Drawing.Point(0, -4);
             this.pnlConfig.MenuButton = this.cmdConfig;
             this.pnlConfig.Name = "pnlConfig";
             this.pnlConfig.ShowCloseButton = false;
-            this.pnlConfig.Size = new System.Drawing.Size(351, 125);
+            this.pnlConfig.Size = new System.Drawing.Size(393, 443);
             this.pnlConfig.SlideIn = PanelWindow.SlideType.Left;
             this.pnlConfig.SlideOut = PanelWindow.SlideType.Rigth;
             this.pnlConfig.TabIndex = 19;
@@ -559,8 +560,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.BackgroundImage = global::GYMManager.Properties.Resources.GYMDefaultWallPaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1007, 445);
+            this.ClientSize = new System.Drawing.Size(1269, 445);
             this.Controls.Add(this.pnlSocios);
+            this.Controls.Add(this.pnlAddPartner);
             this.Controls.Add(this.pnlWndSocios);
             this.Controls.Add(this.cmdConfig);
             this.Controls.Add(this.animatedButton5);
@@ -568,16 +570,12 @@
             this.Controls.Add(this.animatedButton3);
             this.Controls.Add(this.cmdSocios);
             this.Controls.Add(this.cmdHome);
-            this.Controls.Add(this.pnlConfig);
             this.Controls.Add(this.lblGYMTitle);
-            this.Controls.Add(this.pnlAddPartner);
             this.MinimizeBox = false;
             this.Name = "FrmMain";
             this.Text = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.Controls.SetChildIndex(this.pnlAddPartner, 0);
             this.Controls.SetChildIndex(this.lblGYMTitle, 0);
-            this.Controls.SetChildIndex(this.pnlConfig, 0);
             this.Controls.SetChildIndex(this.cmdHome, 0);
             this.Controls.SetChildIndex(this.cmdSocios, 0);
             this.Controls.SetChildIndex(this.animatedButton3, 0);
@@ -585,6 +583,7 @@
             this.Controls.SetChildIndex(this.animatedButton5, 0);
             this.Controls.SetChildIndex(this.cmdConfig, 0);
             this.Controls.SetChildIndex(this.pnlWndSocios, 0);
+            this.Controls.SetChildIndex(this.pnlAddPartner, 0);
             this.Controls.SetChildIndex(this.pnlSocios, 0);
             this.pnlWndSocios.ResumeLayout(false);
             this.pnlSocios.ResumeLayout(false);
