@@ -18,7 +18,7 @@ class PanelWindow : System.Windows.Forms.Panel {
     private AnimatedButton _ButtonOwner;
     private AnimatedButton _cmdClosePanel;
     private static List<AnimatedButton> _RegisteredButtons = new List<AnimatedButton>();
-
+    private Point _InitialLocation;
     #endregion
 
     #region Enums
@@ -33,9 +33,11 @@ class PanelWindow : System.Windows.Forms.Panel {
 
     public PanelWindow() {
         this.InitializeComponent();
+        _InitialLocation = this.Location;
         if (this.DesignMode) {
             this.Visible = false;
         }
+
     }
 
     public void InitializeComponent() {
@@ -120,35 +122,39 @@ class PanelWindow : System.Windows.Forms.Panel {
 
     #region Public Function
 
-    public void SlideTo(SlideType Slide, bool Visible) {
-        Point TargetLocation = this.Location;
-        base.Visible = Visible;//===>Set visible!
+    public void SlideTo(SlideType Slide, bool Visible) {                
         int WidthOffset = 0;
         int HeightOffset = 0;
         int OrientationLenght = 0;
+        Point TargetLocation = _InitialLocation;
 
-        if (Visible) {
-            WidthOffset = this.Width * -1;
-            HeightOffset = this.Height * 1;
-            OrientationLenght = 1;
-        } else {
-            TargetLocation.X -= this.Width;
-            TargetLocation.Y -= this.Height;
-            HeightOffset = 0;
-            OrientationLenght = -1;
-        }
-        
         switch (Slide) {//===>Set the panel start position
             case SlideType.Left:
-                this.Location = new Point(TargetLocation.X + (WidthOffset), TargetLocation.Y);
-
+                if (Visible) {
+                    //===>SlideIn
+                    OrientationLenght = 1;
+                    this.Location = new Point(this.Location.X - this.Width, this.Location.Y);
+                } else { 
+                    //===>SlideOut
+                    OrientationLenght = -1;
+                    TargetLocation.X -= this.Width;
+                }
+                                
                 do {
                     this.Location = new Point(this.Location.X + (OrientationLenght), TargetLocation.Y);
-
                 } while (this.Location.X != TargetLocation.X);
+
+                this.Location = TargetLocation;
 
                 break;
             case SlideType.Rigth:
+                if (Visible) {
+                    //===>SlideIn
+
+                } else {
+                    //===>SlideOut
+
+                }
                 this.Location = new Point(TargetLocation.X + (WidthOffset), TargetLocation.Y);
 
                 do {
@@ -157,6 +163,13 @@ class PanelWindow : System.Windows.Forms.Panel {
 
                 break;
             case SlideType.Top:
+                if (Visible) {
+                    //===>SlideIn
+
+                } else {
+                    //===>SlideOut
+
+                }
                 this.Location = new Point(TargetLocation.X, TargetLocation.Y + (HeightOffset));
 
                 do {
@@ -165,6 +178,13 @@ class PanelWindow : System.Windows.Forms.Panel {
 
                 break;
             case SlideType.Bottom:
+                if (Visible) {
+                    //===>SlideIn
+
+                } else {
+                    //===>SlideOut
+
+                }
                 this.Location = new Point(TargetLocation.X, TargetLocation.Y + (OrientationLenght));
 
                 do {
