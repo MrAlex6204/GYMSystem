@@ -54,13 +54,13 @@
             this.lblGYMTitle = new System.Windows.Forms.Label();
             this.pnlAddPartner = new PanelPartner();
             this.pnlSocios = new PanelWindow();
-            this.pnlSociosCollection = new ItemInfoCollection();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlConfig = new PanelWindow();
             this.cmdCancel = new AnimatedButton();
             this.txtTitle = new TextBoxAnimate();
             this.cmdSaveTitle = new AnimatedButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.pnlSociosCollection = new ItemInfoCollection();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlWndSocios.SuspendLayout();
@@ -264,8 +264,8 @@
             this.pnlWndSocios.Name = "pnlWndSocios";
             this.pnlWndSocios.ShowCloseButton = false;
             this.pnlWndSocios.Size = new System.Drawing.Size(217, 443);
-            this.pnlWndSocios.SlideIn = PanelWindow.SlideType.None;
-            this.pnlWndSocios.SlideOut = PanelWindow.SlideType.None;
+            this.pnlWndSocios.SlideIn = PanelWindow.SlideType.Left;
+            this.pnlWndSocios.SlideOut = PanelWindow.SlideType.Left;
             this.pnlWndSocios.TabIndex = 14;
             // 
             // cmdLstPartners
@@ -373,9 +373,9 @@
             // 
             this.pnlAddPartner.ActionType = PanelPartner.RecordModeAction.NewRecord;
             this.pnlAddPartner.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlAddPartner.Location = new System.Drawing.Point(63, 1);
+            this.pnlAddPartner.Location = new System.Drawing.Point(541, 96);
             this.pnlAddPartner.Name = "pnlAddPartner";
-            this.pnlAddPartner.Size = new System.Drawing.Size(1205, 443);
+            this.pnlAddPartner.Size = new System.Drawing.Size(727, 348);
             socioInfo1.Apellidos = null;
             socioInfo1.Domicilio = null;
             socioInfo1.Edad = null;
@@ -396,39 +396,14 @@
             this.pnlSocios.Controls.Add(this.pnlConfig);
             this.pnlSocios.Controls.Add(this.pnlSociosCollection);
             this.pnlSocios.Controls.Add(this.lblTitle);
-            this.pnlSocios.Location = new System.Drawing.Point(63, 2);
+            this.pnlSocios.Location = new System.Drawing.Point(659, 112);
             this.pnlSocios.MenuButton = null;
             this.pnlSocios.Name = "pnlSocios";
             this.pnlSocios.ShowCloseButton = true;
-            this.pnlSocios.Size = new System.Drawing.Size(1205, 442);
+            this.pnlSocios.Size = new System.Drawing.Size(609, 332);
             this.pnlSocios.SlideIn = PanelWindow.SlideType.None;
             this.pnlSocios.SlideOut = PanelWindow.SlideType.None;
             this.pnlSocios.TabIndex = 18;
-            // 
-            // pnlSociosCollection
-            // 
-            this.pnlSociosCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSociosCollection.AutoScroll = true;
-            this.pnlSociosCollection.Location = new System.Drawing.Point(11, 37);
-            this.pnlSociosCollection.Name = "pnlSociosCollection";
-            this.pnlSociosCollection.Size = new System.Drawing.Size(1180, 391);
-            this.pnlSociosCollection.TabIndex = 47;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Black;
-            this.lblTitle.Image = global::GYMManager.Properties.Resources.ic_account_box_black_24dp;
-            this.lblTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTitle.Location = new System.Drawing.Point(6, 4);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(120, 30);
-            this.lblTitle.TabIndex = 46;
-            this.lblTitle.Text = "Socios";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlConfig
             // 
@@ -437,13 +412,13 @@
             this.pnlConfig.Controls.Add(this.txtTitle);
             this.pnlConfig.Controls.Add(this.cmdSaveTitle);
             this.pnlConfig.Controls.Add(this.label1);
-            this.pnlConfig.Location = new System.Drawing.Point(0, -4);
+            this.pnlConfig.Location = new System.Drawing.Point(259, 276);
             this.pnlConfig.MenuButton = this.cmdConfig;
             this.pnlConfig.Name = "pnlConfig";
             this.pnlConfig.ShowCloseButton = false;
-            this.pnlConfig.Size = new System.Drawing.Size(393, 443);
+            this.pnlConfig.Size = new System.Drawing.Size(134, 163);
             this.pnlConfig.SlideIn = PanelWindow.SlideType.Left;
-            this.pnlConfig.SlideOut = PanelWindow.SlideType.Rigth;
+            this.pnlConfig.SlideOut = PanelWindow.SlideType.Left;
             this.pnlConfig.TabIndex = 19;
             // 
             // cmdCancel
@@ -534,6 +509,31 @@
             this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Titulo :";
+            // 
+            // pnlSociosCollection
+            // 
+            this.pnlSociosCollection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSociosCollection.AutoScroll = true;
+            this.pnlSociosCollection.Location = new System.Drawing.Point(650, 159);
+            this.pnlSociosCollection.Name = "pnlSociosCollection";
+            this.pnlSociosCollection.Size = new System.Drawing.Size(0, 159);
+            this.pnlSociosCollection.TabIndex = 47;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Black;
+            this.lblTitle.Image = global::GYMManager.Properties.Resources.ic_account_box_black_24dp;
+            this.lblTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitle.Location = new System.Drawing.Point(6, 4);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(120, 30);
+            this.lblTitle.TabIndex = 46;
+            this.lblTitle.Text = "Socios";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage1
             // 

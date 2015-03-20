@@ -18,7 +18,7 @@ class PanelWindow : System.Windows.Forms.Panel {
     private AnimatedButton _ButtonOwner;
     private AnimatedButton _cmdClosePanel;
     private static List<AnimatedButton> _RegisteredButtons = new List<AnimatedButton>();
-    private Point _InitialLocation;
+    private Point _InitialLocation = Point.Empty;
     #endregion
 
     #region Enums
@@ -122,29 +122,45 @@ class PanelWindow : System.Windows.Forms.Panel {
 
     #region Public Function
 
-    public void SlideTo(SlideType Slide, bool Visible) {                
-        int WidthOffset = 0;
-        int HeightOffset = 0;
+    public void SlideTo(SlideType Slide, bool Visible) {
         int OrientationLenght = 0;
-        Point TargetLocation = _InitialLocation;
+        Point TargetLocation = Point.Empty;
+
+        if (this.DesignMode) {
+            return;//===>Do not nothing in design mode.
+        }
+
+        if (this.Location != Point.Empty && _InitialLocation == Point.Empty) {
+            _InitialLocation = this.Location; //===>Save the original location.
+        }
+
+        TargetLocation = _InitialLocation;
 
         switch (Slide) {//===>Set the panel start position
             case SlideType.Left:
                 if (Visible) {
                     //===>SlideIn
+                    base.Visible = true;//===>Set visible!
                     OrientationLenght = 1;
-                    this.Location = new Point(this.Location.X - this.Width, this.Location.Y);
-                } else { 
+                    this.Location = new Point(this.Location.X - this.Width, this.Location.Y);//===>Move offset
+                    Debug.Print("Slide In");
+                } else {
                     //===>SlideOut
                     OrientationLenght = -1;
                     TargetLocation.X -= this.Width;
+                    Debug.Print("Slide Out");
                 }
-                                
+
                 do {
                     this.Location = new Point(this.Location.X + (OrientationLenght), TargetLocation.Y);
+                    System.Diagnostics.Debug.Print(Location.X.ToString());                    
                 } while (this.Location.X != TargetLocation.X);
 
                 this.Location = TargetLocation;
+
+                if (!Visible) {
+                    base.Visible = false;//===>Hide control after the slide efect.
+                }
 
                 break;
             case SlideType.Rigth:
@@ -155,11 +171,6 @@ class PanelWindow : System.Windows.Forms.Panel {
                     //===>SlideOut
 
                 }
-                this.Location = new Point(TargetLocation.X + (WidthOffset), TargetLocation.Y);
-
-                do {
-                    this.Location = new Point(this.Location.X + (OrientationLenght), TargetLocation.Y);
-                } while (this.Location.X != TargetLocation.X);
 
                 break;
             case SlideType.Top:
@@ -170,11 +181,6 @@ class PanelWindow : System.Windows.Forms.Panel {
                     //===>SlideOut
 
                 }
-                this.Location = new Point(TargetLocation.X, TargetLocation.Y + (HeightOffset));
-
-                do {
-                    this.Location = new Point(TargetLocation.X, this.Location.Y + (OrientationLenght));
-                } while (this.Location.Y != TargetLocation.X);
 
                 break;
             case SlideType.Bottom:
@@ -185,19 +191,16 @@ class PanelWindow : System.Windows.Forms.Panel {
                     //===>SlideOut
 
                 }
-                this.Location = new Point(TargetLocation.X, TargetLocation.Y + (OrientationLenght));
-
-                do {
-                    this.Location = new Point(this.Location.X, TargetLocation.Y +(OrientationLenght));
-                } while (this.Location.Y != TargetLocation.X);
-
+                break;
+            case SlideType.None:
+                base.Visible = Visible;
                 break;
         }
 
 
 
     }
-    
+
     #endregion
 
     #region Private Functions
@@ -213,9 +216,9 @@ class PanelWindow : System.Windows.Forms.Panel {
         }
         set {
             if (value) {
-                SlideTo(this.SlideIn,true);//Visible
+                SlideTo(this.SlideIn, true);//Visible
             } else {
-                SlideTo(this.SlideOut,false);//Invisible!
+                SlideTo(this.SlideOut, false);//Invisible!
             }
         }
     }
